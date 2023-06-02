@@ -25,7 +25,7 @@ predictor = TabularPredictor(
     eval_metric="root_mean_squared_error",
     learner_kwargs={"ignored_columns": ["casual", "registered"]},
 )
-predictor.fit(train_data=train, time_limit=120, presets="best_quality")
+predictor.fit(train_data=train, time_limit=600, presets="best_quality")
 predictor.fit_summary()
 
 leaderboard_df = pd.DataFrame(predictor.leaderboard())
@@ -74,7 +74,7 @@ predictor_new_features = TabularPredictor(
     eval_metric="root_mean_squared_error",
     learner_kwargs={"ignored_columns": ["casual", "registered"]},
 )
-predictor_new_features.fit(train_data=train, time_limit=120, presets="best_quality")
+predictor_new_features.fit(train_data=train, time_limit=600, presets="best_quality")
 predictor_new_features.fit_summary()
 
 leaderboard_new_df = pd.DataFrame(predictor_new_features.leaderboard())
@@ -105,7 +105,7 @@ predictor_new_hp_1 = TabularPredictor(
 )
 predictor_new_hp_1.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_1,
     refit_full="best",
@@ -131,7 +131,7 @@ predictor_new_hp_2 = TabularPredictor(
 )
 predictor_new_hp_2.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_2,
     refit_full="best",
@@ -150,7 +150,7 @@ predictor_new_hp_3 = TabularPredictor(
 )
 predictor_new_hp_3.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_3,
     refit_full="best",
