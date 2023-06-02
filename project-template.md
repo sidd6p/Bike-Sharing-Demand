@@ -21,13 +21,12 @@ The rubric contains "Stand Out Suggestions" for enhancing the project beyond the
 Below is example of steps to get the API username and key. Each student will have their own username and key.
 
 1. Open account settings.
-![kaggle1.png](attachment:kaggle1.png)
-![kaggle2.png](attachment:kaggle2.png)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/5d1458b6-3ae3-4a37-936e-ad13520c3efe)
 2. Scroll down to API and click Create New API Token.
-![kaggle3.png](attachment:kaggle3.png)
-![kaggle4.png](attachment:kaggle4.png)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/0cd2441b-e7a9-4f92-8df4-5de2bb4e45a0)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/87937c50-50ed-4fc2-a70e-2e4bf1ff5448)
 3. Open up `kaggle.json` and use the username and key.
-![kaggle5.png](attachment:kaggle5.png)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/529ca887-f0e9-41b7-b0e6-9d8bb58e5718)
 
 ## Step 2: Download the Kaggle dataset using the kaggle python library
 
@@ -1013,7 +1012,7 @@ plt.show()
 
 
     
-![png](output_28_1.png)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/c84c5506-3da3-44a9-a820-f579d5071e6a)
     
 
 
@@ -1093,8 +1092,7 @@ plt.show()
 
 
     
-![png](output_41_0.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/d0ea32ab-37f7-4c76-808f-9475a4bf3a8e)    
 
 
 Insights:
@@ -1499,7 +1497,7 @@ plt.show()
 
 
     
-![png](output_48_0.png)
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/1ff1742c-3fba-42dc-9448-b91b80d36fa4)
     
 
 
@@ -1936,8 +1934,7 @@ plt.show()
 
 
     
-![png](output_53_1.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/0becb299-01c1-43e1-93ac-303d14c3bf57)    
 
 
 Insight
@@ -3465,20 +3462,17 @@ plt.show()
 
 
     
-![png](output_76_0.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/bd995124-ab39-4d77-8671-3eeaf0f8728a)    
 
 
 
     
-![png](output_76_1.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/bc68d74f-6b2b-43f0-ab2c-134a06b25261)    
 
 
 
     
-![png](output_76_2.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/17224307-0ef3-45b6-9549-df9fc4bdbdd4)    
 
 
 Insight:
@@ -3616,9 +3610,7 @@ fig.savefig("model_train_score.png")
 
 
     
-![png](output_87_0.png)
-    
-
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/666ca731-d0a9-4c8c-864d-028dec73226d)
 
 
 ```python
@@ -3637,8 +3629,7 @@ fig.savefig("model_test_score.png")
 
 
     
-![png](output_88_0.png)
-    
+![image](https://github.com/sidd6p/Bike-Sharing-Demand/assets/91800813/b2e1c8a7-674a-415b-b985-7a585847da8d)    
 
 
 Conclusion
@@ -3664,19 +3655,6 @@ pd.DataFrame({
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
