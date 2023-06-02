@@ -21,13 +21,13 @@ The rubric contains "Stand Out Suggestions" for enhancing the project beyond the
 Below is example of steps to get the API username and key. Each student will have their own username and key.
 
 1. Open account settings.
-<!-- ![kaggle1.png](attachment:kaggle1.png)
-![kaggle2.png](attachment:kaggle2.png) -->
+![kaggle1.png](attachment:kaggle1.png)
+![kaggle2.png](attachment:kaggle2.png)
 2. Scroll down to API and click Create New API Token.
-<!-- ![kaggle3.png](attachment:kaggle3.png)
-![kaggle4.png](attachment:kaggle4.png) -->
+![kaggle3.png](attachment:kaggle3.png)
+![kaggle4.png](attachment:kaggle4.png)
 3. Open up `kaggle.json` and use the username and key.
-<!-- ![kaggle5.png](attachment:kaggle5.png) -->
+![kaggle5.png](attachment:kaggle5.png)
 
 ## Step 2: Download the Kaggle dataset using the kaggle python library
 
@@ -46,548 +46,6 @@ Below is example of steps to get the API username and key. Each student will hav
 !pip install autogluon --no-cache-dir
 ```
 
-    Requirement already satisfied: pip in /usr/local/lib/python3.8/dist-packages (21.3.1)
-    Collecting pip
-      Using cached pip-23.1.2-py3-none-any.whl (2.1 MB)
-    Installing collected packages: pip
-      Attempting uninstall: pip
-        Found existing installation: pip 21.3.1
-        Uninstalling pip-21.3.1:
-          Successfully uninstalled pip-21.3.1
-    Successfully installed pip-23.1.2
-    [33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m
-    Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (59.3.0)
-    Collecting setuptools
-      Using cached setuptools-67.8.0-py3-none-any.whl (1.1 MB)
-    Requirement already satisfied: wheel in /usr/lib/python3/dist-packages (0.34.2)
-    Collecting wheel
-      Using cached wheel-0.40.0-py3-none-any.whl (64 kB)
-    Installing collected packages: wheel, setuptools
-      Attempting uninstall: wheel
-        Found existing installation: wheel 0.34.2
-        Uninstalling wheel-0.34.2:
-          Successfully uninstalled wheel-0.34.2
-      Attempting uninstall: setuptools
-        Found existing installation: setuptools 59.3.0
-        Uninstalling setuptools-59.3.0:
-          Successfully uninstalled setuptools-59.3.0
-    Successfully installed setuptools-67.8.0 wheel-0.40.0
-    [33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m[33m
-    [0mCollecting mxnet<2.0.0
-      Using cached mxnet-1.9.1-py3-none-manylinux2014_x86_64.whl (49.1 MB)
-    Collecting bokeh==2.0.1
-      Using cached bokeh-2.0.1-py3-none-any.whl
-    Requirement already satisfied: PyYAML>=3.10 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (5.4.1)
-    Requirement already satisfied: python-dateutil>=2.1 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (2.8.0)
-    Requirement already satisfied: Jinja2>=2.7 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (3.0.3)
-    Requirement already satisfied: numpy>=1.11.3 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (1.19.1)
-    Requirement already satisfied: pillow>=4.0 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (9.0.0)
-    Requirement already satisfied: packaging>=16.8 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (21.3)
-    Requirement already satisfied: tornado>=5 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (6.0.4)
-    Requirement already satisfied: typing-extensions>=3.7.4 in /usr/local/lib/python3.8/dist-packages (from bokeh==2.0.1) (4.0.1)
-    Requirement already satisfied: requests<3,>=2.20.0 in /usr/local/lib/python3.8/dist-packages (from mxnet<2.0.0) (2.27.1)
-    Requirement already satisfied: graphviz<0.9.0,>=0.8.1 in /usr/local/lib/python3.8/dist-packages (from mxnet<2.0.0) (0.8.4)
-    Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.8/dist-packages (from Jinja2>=2.7->bokeh==2.0.1) (2.0.1)
-    Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.8/dist-packages (from packaging>=16.8->bokeh==2.0.1) (3.0.7)
-    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil>=2.1->bokeh==2.0.1) (1.16.0)
-    Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests<3,>=2.20.0->mxnet<2.0.0) (1.26.8)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests<3,>=2.20.0->mxnet<2.0.0) (2021.10.8)
-    Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.8/dist-packages (from requests<3,>=2.20.0->mxnet<2.0.0) (2.0.10)
-    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.8/dist-packages (from requests<3,>=2.20.0->mxnet<2.0.0) (3.3)
-    Installing collected packages: mxnet, bokeh
-      Attempting uninstall: bokeh
-        Found existing installation: bokeh 2.4.2
-        Uninstalling bokeh-2.4.2:
-          Successfully uninstalled bokeh-2.4.2
-    Successfully installed bokeh-2.0.1 mxnet-1.9.1
-    [33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m[33m
-    [0mCollecting autogluon
-      Downloading autogluon-0.7.0-py3-none-any.whl (9.7 kB)
-    Collecting autogluon.core[all]==0.7.0 (from autogluon)
-      Downloading autogluon.core-0.7.0-py3-none-any.whl (218 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m218.3/218.3 kB[0m [31m101.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting autogluon.features==0.7.0 (from autogluon)
-      Downloading autogluon.features-0.7.0-py3-none-any.whl (60 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m60.1/60.1 kB[0m [31m154.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting autogluon.tabular[all]==0.7.0 (from autogluon)
-      Downloading autogluon.tabular-0.7.0-py3-none-any.whl (292 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m292.2/292.2 kB[0m [31m327.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting autogluon.multimodal==0.7.0 (from autogluon)
-      Downloading autogluon.multimodal-0.7.0-py3-none-any.whl (331 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m331.1/331.1 kB[0m [31m175.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting autogluon.timeseries[all]==0.7.0 (from autogluon)
-      Downloading autogluon.timeseries-0.7.0-py3-none-any.whl (108 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m108.7/108.7 kB[0m [31m194.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting numpy<1.27,>=1.21 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading numpy-1.24.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m17.3/17.3 MB[0m [31m255.6 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hRequirement already satisfied: scipy<1.12,>=1.5.4 in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (1.7.0)
-    Requirement already satisfied: scikit-learn<1.3,>=1.0 in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (1.0.2)
-    Collecting networkx<3.0,>=2.3 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading networkx-2.8.8-py3-none-any.whl (2.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.0/2.0 MB[0m [31m297.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting pandas<1.6,>=1.4.1 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading pandas-1.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.2/12.2 MB[0m [31m257.9 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hRequirement already satisfied: tqdm<5,>=4.38 in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (4.39.0)
-    Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (2.27.1)
-    Requirement already satisfied: matplotlib in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (3.5.1)
-    Requirement already satisfied: boto3<2,>=1.10 in /usr/local/lib/python3.8/dist-packages (from autogluon.core[all]==0.7.0->autogluon) (1.20.42)
-    Collecting autogluon.common==0.7.0 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading autogluon.common-0.7.0-py3-none-any.whl (45 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m45.0/45.0 kB[0m [31m202.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting hyperopt<0.2.8,>=0.2.7 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading hyperopt-0.2.7-py2.py3-none-any.whl (1.6 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.6/1.6 MB[0m [31m320.3 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting ray[tune]<2.3,>=2.2 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading ray-2.2.0-cp38-cp38-manylinux2014_x86_64.whl (57.4 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m57.4/57.4 MB[0m [31m126.5 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting Pillow<9.6,>=9.3 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading Pillow-9.5.0-cp38-cp38-manylinux_2_28_x86_64.whl (3.4 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.4/3.4 MB[0m [31m287.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting jsonschema<4.18,>=4.14 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading jsonschema-4.17.3-py3-none-any.whl (90 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m90.4/90.4 kB[0m [31m273.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting seqeval<1.3.0,>=1.2.2 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading seqeval-1.2.2.tar.gz (43 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m43.6/43.6 kB[0m [31m202.7 MB/s[0m eta [36m0:00:00[0m
-    [?25h  Preparing metadata (setup.py) ... [?25ldone
-    [?25hCollecting evaluate<0.4.0,>=0.2.2 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading evaluate-0.3.0-py3-none-any.whl (72 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m72.9/72.9 kB[0m [31m198.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting accelerate<0.17,>=0.9 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading accelerate-0.16.0-py3-none-any.whl (199 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m199.7/199.7 kB[0m [31m310.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting timm<0.7.0,>=0.6.12 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading timm-0.6.13-py3-none-any.whl (549 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m549.1/549.1 kB[0m [31m357.9 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting torch<1.14,>=1.9 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m887.4/887.4 MB[0m [31m244.6 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting torchvision<0.15.0 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading torchvision-0.14.1-cp38-cp38-manylinux1_x86_64.whl (24.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24.2/24.2 MB[0m [31m223.1 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting fairscale<0.4.14,>=0.4.5 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading fairscale-0.4.13.tar.gz (266 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m266.3/266.3 kB[0m [31m286.7 MB/s[0m eta [36m0:00:00[0m
-    [?25h  Installing build dependencies ... [?25ldone
-    [?25h  Getting requirements to build wheel ... [?25ldone
-    [?25h  Installing backend dependencies ... [?25ldone
-    [?25h  Preparing metadata (pyproject.toml) ... [?25ldone
-    [?25hCollecting scikit-image<0.20.0,>=0.19.1 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading scikit_image-0.19.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m14.0/14.0 MB[0m [31m191.7 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting pytorch-lightning<1.10.0,>=1.9.0 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading pytorch_lightning-1.9.5-py3-none-any.whl (829 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m829.5/829.5 kB[0m [31m369.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting text-unidecode<1.4,>=1.3 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m78.2/78.2 kB[0m [31m257.7 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting torchmetrics<0.9.0,>=0.8.0 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading torchmetrics-0.8.2-py3-none-any.whl (409 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m409.8/409.8 kB[0m [31m348.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting transformers<4.27.0,>=4.23.0 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading transformers-4.26.1-py3-none-any.whl (6.3 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/6.3 MB[0m [31m167.8 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting nptyping<2.5.0,>=1.4.4 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading nptyping-2.4.1-py3-none-any.whl (36 kB)
-    Collecting omegaconf<2.3.0,>=2.1.1 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading omegaconf-2.2.3-py3-none-any.whl (79 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m79.3/79.3 kB[0m [31m255.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting sentencepiece<0.2.0,>=0.1.95 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading sentencepiece-0.1.99-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.3/1.3 MB[0m [31m284.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting pytorch-metric-learning<2.0,>=1.3.0 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading pytorch_metric_learning-1.7.3-py3-none-any.whl (112 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m112.2/112.2 kB[0m [31m275.3 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting nlpaug<1.2.0,>=1.1.10 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading nlpaug-1.1.11-py3-none-any.whl (410 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m410.5/410.5 kB[0m [31m344.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting nltk<4.0.0,>=3.4.5 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading nltk-3.8.1-py3-none-any.whl (1.5 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.5/1.5 MB[0m [31m369.7 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting openmim<0.4.0,>0.1.5 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading openmim-0.3.7-py2.py3-none-any.whl (51 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m51.3/51.3 kB[0m [31m199.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting defusedxml<0.7.2,>=0.7.1 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
-    Requirement already satisfied: jinja2<3.2,>=3.0.3 in /usr/local/lib/python3.8/dist-packages (from autogluon.multimodal==0.7.0->autogluon) (3.0.3)
-    Collecting tensorboard<3,>=2.9 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading tensorboard-2.13.0-py3-none-any.whl (5.6 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.6/5.6 MB[0m [31m270.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting pytesseract<0.3.11,>=0.3.9 (from autogluon.multimodal==0.7.0->autogluon)
-      Downloading pytesseract-0.3.10-py3-none-any.whl (14 kB)
-    Collecting catboost<1.2,>=1.0 (from autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading catboost-1.1.1-cp38-none-manylinux1_x86_64.whl (76.6 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m76.6/76.6 MB[0m [31m221.7 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting lightgbm<3.4,>=3.3 (from autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading lightgbm-3.3.5-py3-none-manylinux1_x86_64.whl (2.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.0/2.0 MB[0m [31m313.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting xgboost<1.8,>=1.6 (from autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading xgboost-1.7.5-py3-none-manylinux2014_x86_64.whl (200.3 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m200.3/200.3 MB[0m [31m217.6 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting fastai<2.8,>=2.3.1 (from autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading fastai-2.7.12-py3-none-any.whl (233 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m233.1/233.1 kB[0m [31m287.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: joblib<2,>=1.1 in /usr/local/lib/python3.8/dist-packages (from autogluon.timeseries[all]==0.7.0->autogluon) (1.1.0)
-    Collecting statsmodels<0.14,>=0.13.0 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading statsmodels-0.13.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.9 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m9.9/9.9 MB[0m [31m228.7 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting gluonts<0.13,>=0.12.0 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading gluonts-0.12.8-py3-none-any.whl (1.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.2/1.2 MB[0m [31m281.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting statsforecast<1.5,>=1.4.0 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading statsforecast-1.4.0-py3-none-any.whl (91 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m92.0/92.0 kB[0m [31m202.9 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting ujson<6,>=5 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading ujson-5.7.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (52 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m52.8/52.8 kB[0m [31m205.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting sktime<0.16,>=0.14 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading sktime-0.15.1-py3-none-any.whl (16.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.0/16.0 MB[0m [31m185.5 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting tbats<2,>=1.1 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading tbats-1.1.3-py3-none-any.whl (44 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m44.0/44.0 kB[0m [31m201.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting pmdarima<1.9,>=1.8.2 (from autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading pmdarima-1.8.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.5 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.5/1.5 MB[0m [31m368.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: psutil<6,>=5.7.3 in /usr/local/lib/python3.8/dist-packages (from autogluon.common==0.7.0->autogluon.core[all]==0.7.0->autogluon) (5.9.0)
-    Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from autogluon.common==0.7.0->autogluon.core[all]==0.7.0->autogluon) (67.8.0)
-    Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.8/dist-packages (from accelerate<0.17,>=0.9->autogluon.multimodal==0.7.0->autogluon) (21.3)
-    Requirement already satisfied: pyyaml in /usr/local/lib/python3.8/dist-packages (from accelerate<0.17,>=0.9->autogluon.multimodal==0.7.0->autogluon) (5.4.1)
-    Requirement already satisfied: botocore<1.24.0,>=1.23.42 in /usr/local/lib/python3.8/dist-packages (from boto3<2,>=1.10->autogluon.core[all]==0.7.0->autogluon) (1.23.42)
-    Requirement already satisfied: jmespath<1.0.0,>=0.7.1 in /usr/local/lib/python3.8/dist-packages (from boto3<2,>=1.10->autogluon.core[all]==0.7.0->autogluon) (0.10.0)
-    Requirement already satisfied: s3transfer<0.6.0,>=0.5.0 in /usr/local/lib/python3.8/dist-packages (from boto3<2,>=1.10->autogluon.core[all]==0.7.0->autogluon) (0.5.0)
-    Requirement already satisfied: graphviz in /usr/local/lib/python3.8/dist-packages (from catboost<1.2,>=1.0->autogluon.tabular[all]==0.7.0->autogluon) (0.8.4)
-    Requirement already satisfied: plotly in /usr/local/lib/python3.8/dist-packages (from catboost<1.2,>=1.0->autogluon.tabular[all]==0.7.0->autogluon) (5.5.0)
-    Requirement already satisfied: six in /usr/local/lib/python3.8/dist-packages (from catboost<1.2,>=1.0->autogluon.tabular[all]==0.7.0->autogluon) (1.16.0)
-    Collecting datasets>=2.0.0 (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading datasets-2.12.0-py3-none-any.whl (474 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m474.6/474.6 kB[0m [31m361.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: dill in /usr/local/lib/python3.8/dist-packages (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon) (0.3.4)
-    Collecting tqdm<5,>=4.38 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading tqdm-4.65.0-py3-none-any.whl (77 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m77.1/77.1 kB[0m [31m254.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting xxhash (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading xxhash-3.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (213 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m213.0/213.0 kB[0m [31m315.7 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: multiprocess in /usr/local/lib/python3.8/dist-packages (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon) (0.70.12.2)
-    Requirement already satisfied: fsspec[http]>=2021.05.0 in /usr/local/lib/python3.8/dist-packages (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon) (2022.1.0)
-    Collecting huggingface-hub>=0.7.0 (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading huggingface_hub-0.15.0-py3-none-any.whl (236 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m236.8/236.8 kB[0m [31m334.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting responses<0.19 (from evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading responses-0.18.0-py3-none-any.whl (38 kB)
-    Requirement already satisfied: pip in /usr/local/lib/python3.8/dist-packages (from fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon) (23.1.2)
-    Collecting fastdownload<2,>=0.0.5 (from fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading fastdownload-0.0.7-py3-none-any.whl (12 kB)
-    Collecting fastcore<1.6,>=1.5.29 (from fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading fastcore-1.5.29-py3-none-any.whl (67 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m67.6/67.6 kB[0m [31m238.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting fastprogress>=0.2.4 (from fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading fastprogress-1.0.3-py3-none-any.whl (12 kB)
-    Collecting spacy<4 (from fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading spacy-3.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.8 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.8/6.8 MB[0m [31m280.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting pydantic~=1.7 (from gluonts<0.13,>=0.12.0->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading pydantic-1.10.8-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.2/3.2 MB[0m [31m335.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting toolz~=0.10 (from gluonts<0.13,>=0.12.0->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m55.8/55.8 kB[0m [31m220.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: typing-extensions~=4.0 in /usr/local/lib/python3.8/dist-packages (from gluonts<0.13,>=0.12.0->autogluon.timeseries[all]==0.7.0->autogluon) (4.0.1)
-    Collecting future (from hyperopt<0.2.8,>=0.2.7->autogluon.core[all]==0.7.0->autogluon)
-      Downloading future-0.18.3.tar.gz (840 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m840.9/840.9 kB[0m [31m361.6 MB/s[0m eta [36m0:00:00[0m
-    [?25h  Preparing metadata (setup.py) ... [?25ldone
-    [?25hRequirement already satisfied: cloudpickle in /usr/local/lib/python3.8/dist-packages (from hyperopt<0.2.8,>=0.2.7->autogluon.core[all]==0.7.0->autogluon) (2.0.0)
-    Collecting py4j (from hyperopt<0.2.8,>=0.2.7->autogluon.core[all]==0.7.0->autogluon)
-      Downloading py4j-0.10.9.7-py2.py3-none-any.whl (200 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m200.5/200.5 kB[0m [31m283.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.8/dist-packages (from jinja2<3.2,>=3.0.3->autogluon.multimodal==0.7.0->autogluon) (2.0.1)
-    Requirement already satisfied: attrs>=17.4.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema<4.18,>=4.14->autogluon.multimodal==0.7.0->autogluon) (21.4.0)
-    Collecting importlib-resources>=1.4.0 (from jsonschema<4.18,>=4.14->autogluon.multimodal==0.7.0->autogluon)
-      Downloading importlib_resources-5.12.0-py3-none-any.whl (36 kB)
-    Collecting pkgutil-resolve-name>=1.3.10 (from jsonschema<4.18,>=4.14->autogluon.multimodal==0.7.0->autogluon)
-      Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
-    Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0 (from jsonschema<4.18,>=4.14->autogluon.multimodal==0.7.0->autogluon)
-      Downloading pyrsistent-0.19.3-py3-none-any.whl (57 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m57.5/57.5 kB[0m [31m225.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from lightgbm<3.4,>=3.3->autogluon.tabular[all]==0.7.0->autogluon) (0.40.0)
-    Collecting gdown>=4.0.0 (from nlpaug<1.2.0,>=1.1.10->autogluon.multimodal==0.7.0->autogluon)
-      Downloading gdown-4.7.1-py3-none-any.whl (15 kB)
-    Collecting click (from nltk<4.0.0,>=3.4.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading click-8.1.3-py3-none-any.whl (96 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m96.6/96.6 kB[0m [31m265.3 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting regex>=2021.8.3 (from nltk<4.0.0,>=3.4.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading regex-2023.5.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (771 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m771.9/771.9 kB[0m [31m355.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting antlr4-python3-runtime==4.9.* (from omegaconf<2.3.0,>=2.1.1->autogluon.multimodal==0.7.0->autogluon)
-      Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m117.0/117.0 kB[0m [31m283.0 MB/s[0m eta [36m0:00:00[0m
-    [?25h  Preparing metadata (setup.py) ... [?25ldone
-    [?25hRequirement already satisfied: colorama in /usr/local/lib/python3.8/dist-packages (from openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon) (0.4.3)
-    Collecting model-index (from openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading model_index-0.1.11-py3-none-any.whl (34 kB)
-    Collecting rich (from openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading rich-13.4.1-py3-none-any.whl (239 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m239.4/239.4 kB[0m [31m306.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: tabulate in /usr/local/lib/python3.8/dist-packages (from openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon) (0.8.9)
-    Collecting python-dateutil>=2.8.1 (from pandas<1.6,>=1.4.1->autogluon.core[all]==0.7.0->autogluon)
-      Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m247.7/247.7 kB[0m [31m328.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.8/dist-packages (from pandas<1.6,>=1.4.1->autogluon.core[all]==0.7.0->autogluon) (2021.3)
-    Requirement already satisfied: Cython!=0.29.18,>=0.29 in /usr/local/lib/python3.8/dist-packages (from pmdarima<1.9,>=1.8.2->autogluon.timeseries[all]==0.7.0->autogluon) (0.29.26)
-    Requirement already satisfied: urllib3 in /usr/local/lib/python3.8/dist-packages (from pmdarima<1.9,>=1.8.2->autogluon.timeseries[all]==0.7.0->autogluon) (1.26.8)
-    Collecting lightning-utilities>=0.6.0.post0 (from pytorch-lightning<1.10.0,>=1.9.0->autogluon.multimodal==0.7.0->autogluon)
-      Downloading lightning_utilities-0.8.0-py3-none-any.whl (20 kB)
-    Collecting filelock (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading filelock-3.12.0-py3-none-any.whl (10 kB)
-    Collecting msgpack<2.0.0,>=1.0.0 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading msgpack-1.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m322.4/322.4 kB[0m [31m340.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /usr/local/lib/python3.8/dist-packages (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon) (3.19.3)
-    Collecting aiosignal (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
-    Collecting frozenlist (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading frozenlist-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (161 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m161.3/161.3 kB[0m [31m302.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting virtualenv>=20.0.24 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading virtualenv-20.23.0-py3-none-any.whl (3.3 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m320.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting grpcio>=1.32.0 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading grpcio-1.54.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.1/5.1 MB[0m [31m297.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting tensorboardX>=1.9 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading tensorboardX-2.6-py2.py3-none-any.whl (114 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m114.5/114.5 kB[0m [31m273.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests->autogluon.core[all]==0.7.0->autogluon) (2021.10.8)
-    Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.8/dist-packages (from requests->autogluon.core[all]==0.7.0->autogluon) (2.0.10)
-    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.8/dist-packages (from requests->autogluon.core[all]==0.7.0->autogluon) (3.3)
-    Requirement already satisfied: imageio>=2.4.1 in /usr/local/lib/python3.8/dist-packages (from scikit-image<0.20.0,>=0.19.1->autogluon.multimodal==0.7.0->autogluon) (2.14.1)
-    Collecting tifffile>=2019.7.26 (from scikit-image<0.20.0,>=0.19.1->autogluon.multimodal==0.7.0->autogluon)
-      Downloading tifffile-2023.4.12-py3-none-any.whl (219 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m219.4/219.4 kB[0m [31m312.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting PyWavelets>=1.1.1 (from scikit-image<0.20.0,>=0.19.1->autogluon.multimodal==0.7.0->autogluon)
-      Downloading PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.9 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.9/6.9 MB[0m [31m266.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: threadpoolctl>=2.0.0 in /usr/local/lib/python3.8/dist-packages (from scikit-learn<1.3,>=1.0->autogluon.core[all]==0.7.0->autogluon) (3.0.0)
-    Collecting numpy<1.27,>=1.21 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading numpy-1.22.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.9 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.9/16.9 MB[0m [31m169.4 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting deprecated>=1.2.13 (from sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
-    Requirement already satisfied: numba>=0.55 in /usr/local/lib/python3.8/dist-packages (from sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon) (0.55.0)
-    Collecting scipy<1.12,>=1.5.4 (from autogluon.core[all]==0.7.0->autogluon)
-      Downloading scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m34.5/34.5 MB[0m [31m190.6 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting patsy>=0.5.2 (from statsmodels<0.14,>=0.13.0->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading patsy-0.5.3-py2.py3-none-any.whl (233 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m233.8/233.8 kB[0m [31m337.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting absl-py>=0.4 (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading absl_py-1.4.0-py3-none-any.whl (126 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m126.5/126.5 kB[0m [31m290.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting google-auth<3,>=1.6.3 (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading google_auth-2.19.0-py2.py3-none-any.whl (181 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m181.3/181.3 kB[0m [31m316.1 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting google-auth-oauthlib<1.1,>=0.5 (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading google_auth_oauthlib-1.0.0-py2.py3-none-any.whl (18 kB)
-    Collecting markdown>=2.6.8 (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading Markdown-3.4.3-py3-none-any.whl (93 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m93.9/93.9 kB[0m [31m256.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting protobuf!=3.19.5,>=3.15.3 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading protobuf-4.23.2-cp37-abi3-manylinux2014_x86_64.whl (304 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m304.5/304.5 kB[0m [31m333.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading tensorboard_data_server-0.7.0-py3-none-manylinux2014_x86_64.whl (6.6 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.6/6.6 MB[0m [31m298.9 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: werkzeug>=1.0.1 in /usr/local/lib/python3.8/dist-packages (from tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon) (2.0.2)
-    Collecting nvidia-cuda-runtime-cu11==11.7.99 (from torch<1.14,>=1.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m849.3/849.3 kB[0m [31m346.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting nvidia-cudnn-cu11==8.5.0.96 (from torch<1.14,>=1.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m557.1/557.1 MB[0m [31m242.3 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting nvidia-cublas-cu11==11.10.3.66 (from torch<1.14,>=1.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m317.1/317.1 MB[0m [31m193.4 MB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hCollecting nvidia-cuda-nvrtc-cu11==11.7.99 (from torch<1.14,>=1.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m21.0/21.0 MB[0m [31m224.9 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting pyDeprecate==0.3.* (from torchmetrics<0.9.0,>=0.8.0->autogluon.multimodal==0.7.0->autogluon)
-      Downloading pyDeprecate-0.3.2-py3-none-any.whl (10 kB)
-    Collecting tokenizers!=0.11.3,<0.14,>=0.11.1 (from transformers<4.27.0,>=4.23.0->autogluon.multimodal==0.7.0->autogluon)
-      Downloading tokenizers-0.13.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m7.8/7.8 MB[0m [31m238.3 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.8/dist-packages (from matplotlib->autogluon.core[all]==0.7.0->autogluon) (0.11.0)
-    Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.8/dist-packages (from matplotlib->autogluon.core[all]==0.7.0->autogluon) (4.29.0)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.8/dist-packages (from matplotlib->autogluon.core[all]==0.7.0->autogluon) (1.3.2)
-    Requirement already satisfied: pyparsing>=2.2.1 in /usr/local/lib/python3.8/dist-packages (from matplotlib->autogluon.core[all]==0.7.0->autogluon) (3.0.7)
-    Collecting pyarrow>=8.0.0 (from datasets>=2.0.0->evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading pyarrow-12.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (39.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m39.0/39.0 MB[0m [31m201.3 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting aiohttp (from datasets>=2.0.0->evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading aiohttp-3.8.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/1.0 MB[0m [31m359.9 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting wrapt<2,>=1.10 (from deprecated>=1.2.13->sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading wrapt-1.15.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (81 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m81.5/81.5 kB[0m [31m245.0 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting beautifulsoup4 (from gdown>=4.0.0->nlpaug<1.2.0,>=1.1.10->autogluon.multimodal==0.7.0->autogluon)
-      Downloading beautifulsoup4-4.12.2-py3-none-any.whl (142 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m143.0/143.0 kB[0m [31m302.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting cachetools<6.0,>=2.0.0 (from google-auth<3,>=1.6.3->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading cachetools-5.3.1-py3-none-any.whl (9.3 kB)
-    Collecting pyasn1-modules>=0.2.1 (from google-auth<3,>=1.6.3->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m181.3/181.3 kB[0m [31m310.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: rsa<5,>=3.1.4 in /usr/local/lib/python3.8/dist-packages (from google-auth<3,>=1.6.3->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon) (4.7.2)
-    Collecting requests-oauthlib>=0.7.0 (from google-auth-oauthlib<1.1,>=0.5->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
-    Requirement already satisfied: zipp>=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources>=1.4.0->jsonschema<4.18,>=4.14->autogluon.multimodal==0.7.0->autogluon) (3.7.0)
-    Requirement already satisfied: importlib-metadata>=4.4 in /usr/local/lib/python3.8/dist-packages (from markdown>=2.6.8->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon) (4.10.1)
-    Requirement already satisfied: llvmlite<0.39,>=0.38.0rc1 in /usr/local/lib/python3.8/dist-packages (from numba>=0.55->sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon) (0.38.0)
-    INFO: pip is looking at multiple versions of numba to determine which version is compatible with other requirements. This could take a while.
-    Collecting numba>=0.55 (from sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading numba-0.57.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.6 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.6/3.6 MB[0m [31m294.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting llvmlite<0.41,>=0.40.0dev0 (from numba>=0.55->sktime<0.16,>=0.14->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading llvmlite-0.40.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (42.1 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m42.1/42.1 MB[0m [31m257.1 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting typing-extensions~=4.0 (from gluonts<0.13,>=0.12.0->autogluon.timeseries[all]==0.7.0->autogluon)
-      Downloading typing_extensions-4.6.2-py3-none-any.whl (31 kB)
-    Collecting spacy-legacy<3.1.0,>=3.0.11 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl (29 kB)
-    Collecting spacy-loggers<2.0.0,>=1.0.0 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading spacy_loggers-1.0.4-py3-none-any.whl (11 kB)
-    Collecting murmurhash<1.1.0,>=0.28.0 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading murmurhash-1.0.9-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (21 kB)
-    Collecting cymem<2.1.0,>=2.0.2 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading cymem-2.0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36 kB)
-    Collecting preshed<3.1.0,>=3.0.2 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading preshed-3.0.8-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m130.8/130.8 kB[0m [31m301.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting thinc<8.2.0,>=8.1.8 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading thinc-8.1.10-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (928 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m928.2/928.2 kB[0m [31m258.5 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting wasabi<1.2.0,>=0.9.1 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading wasabi-1.1.1-py3-none-any.whl (27 kB)
-    Collecting srsly<3.0.0,>=2.4.3 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading srsly-2.4.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (493 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m493.5/493.5 kB[0m [31m360.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting catalogue<2.1.0,>=2.0.6 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading catalogue-2.0.8-py3-none-any.whl (17 kB)
-    Collecting typer<0.8.0,>=0.3.0 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading typer-0.7.0-py3-none-any.whl (38 kB)
-    Collecting pathy>=0.10.0 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading pathy-0.10.1-py3-none-any.whl (48 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m48.9/48.9 kB[0m [31m210.3 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting smart-open<7.0.0,>=5.2.1 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading smart_open-6.3.0-py3-none-any.whl (56 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m56.8/56.8 kB[0m [31m218.7 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting langcodes<4.0.0,>=3.2.0 (from spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading langcodes-3.3.0-py3-none-any.whl (181 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m181.6/181.6 kB[0m [31m310.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting protobuf!=3.19.5,>=3.15.3 (from ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.0/1.0 MB[0m [31m354.2 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting distlib<1,>=0.3.6 (from virtualenv>=20.0.24->ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading distlib-0.3.6-py2.py3-none-any.whl (468 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m468.5/468.5 kB[0m [31m357.6 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting platformdirs<4,>=3.2 (from virtualenv>=20.0.24->ray[tune]<2.3,>=2.2->autogluon.core[all]==0.7.0->autogluon)
-      Downloading platformdirs-3.5.1-py3-none-any.whl (15 kB)
-    Collecting ordered-set (from model-index->openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
-    Requirement already satisfied: tenacity>=6.2.0 in /usr/local/lib/python3.8/dist-packages (from plotly->catboost<1.2,>=1.0->autogluon.tabular[all]==0.7.0->autogluon) (8.0.1)
-    Collecting markdown-it-py<3.0.0,>=2.2.0 (from rich->openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading markdown_it_py-2.2.0-py3-none-any.whl (84 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m84.5/84.5 kB[0m [31m259.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hRequirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.8/dist-packages (from rich->openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon) (2.14.0)
-    Collecting mdurl~=0.1 (from markdown-it-py<3.0.0,>=2.2.0->rich->openmim<0.4.0,>0.1.5->autogluon.multimodal==0.7.0->autogluon)
-      Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
-    Requirement already satisfied: pyasn1<0.6.0,>=0.4.6 in /usr/local/lib/python3.8/dist-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon) (0.4.8)
-    Collecting oauthlib>=3.0.0 (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard<3,>=2.9->autogluon.multimodal==0.7.0->autogluon)
-      Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m151.7/151.7 kB[0m [31m306.7 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting blis<0.8.0,>=0.7.8 (from thinc<8.2.0,>=8.1.8->spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading blis-0.7.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.2 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10.2/10.2 MB[0m [31m262.3 MB/s[0m eta [36m0:00:00[0ma [36m0:00:01[0m
-    [?25hCollecting confection<1.0.0,>=0.0.1 (from thinc<8.2.0,>=8.1.8->spacy<4->fastai<2.8,>=2.3.1->autogluon.tabular[all]==0.7.0->autogluon)
-      Downloading confection-0.0.4-py3-none-any.whl (32 kB)
-    Collecting multidict<7.0,>=4.5 (from aiohttp->datasets>=2.0.0->evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading multidict-6.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m121.3/121.3 kB[0m [31m286.8 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting async-timeout<5.0,>=4.0.0a3 (from aiohttp->datasets>=2.0.0->evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
-    Collecting yarl<2.0,>=1.0 (from aiohttp->datasets>=2.0.0->evaluate<0.4.0,>=0.2.2->autogluon.multimodal==0.7.0->autogluon)
-      Downloading yarl-1.9.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (266 kB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m266.9/266.9 kB[0m [31m324.4 MB/s[0m eta [36m0:00:00[0m
-    [?25hCollecting soupsieve>1.2 (from beautifulsoup4->gdown>=4.0.0->nlpaug<1.2.0,>=1.1.10->autogluon.multimodal==0.7.0->autogluon)
-      Downloading soupsieve-2.4.1-py3-none-any.whl (36 kB)
-    Collecting PySocks!=1.5.7,>=1.5.6 (from requests->autogluon.core[all]==0.7.0->autogluon)
-      Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
-    Building wheels for collected packages: fairscale, antlr4-python3-runtime, seqeval, future
-      Building wheel for fairscale (pyproject.toml) ... [?25ldone
-    [?25h  Created wheel for fairscale: filename=fairscale-0.4.13-py3-none-any.whl size=332112 sha256=6311282742d67bcfaac3b3d03e2d69ffc5ccc624f45376d161badab22519d278
-      Stored in directory: /tmp/pip-ephem-wheel-cache-dp0eg_ti/wheels/b8/02/9b/dc7d4ff5145afdd28f456dae6605a46619af0370eca30d8d7e
-      Building wheel for antlr4-python3-runtime (setup.py) ... [?25ldone
-    [?25h  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144554 sha256=ce091d38e637f2f300422f9e072b5593c4127c8ebaf4eb06e30b7406cfc138d5
-      Stored in directory: /tmp/pip-ephem-wheel-cache-dp0eg_ti/wheels/b1/a3/c2/6df046c09459b73cc9bb6c4401b0be6c47048baf9a1617c485
-      Building wheel for seqeval (setup.py) ... [?25ldone
-    [?25h  Created wheel for seqeval: filename=seqeval-1.2.2-py3-none-any.whl size=16165 sha256=086b0f666a5c92fb30629105340ec5773610576e4a32f0444c4da3b5cd1726c3
-      Stored in directory: /tmp/pip-ephem-wheel-cache-dp0eg_ti/wheels/ad/5c/ba/05fa33fa5855777b7d686e843ec07452f22a66a138e290e732
-      Building wheel for future (setup.py) ... [?25ldone
-    [?25h  Created wheel for future: filename=future-0.18.3-py3-none-any.whl size=492022 sha256=e4480c010e6de99f0fbd6be41b809acad746a51f81aaeb00701114a165c9acb9
-      Stored in directory: /tmp/pip-ephem-wheel-cache-dp0eg_ti/wheels/a0/0b/ee/e6994fadb42c1354dcccb139b0bf2795271bddfe6253ccdf11
-    Successfully built fairscale antlr4-python3-runtime seqeval future
-    Installing collected packages: tokenizers, text-unidecode, sentencepiece, py4j, msgpack, distlib, cymem, antlr4-python3-runtime, xxhash, wrapt, wasabi, ujson, typing-extensions, tqdm, toolz, tensorboard-data-server, spacy-loggers, spacy-legacy, soupsieve, smart-open, regex, python-dateutil, PySocks, pyrsistent, pyDeprecate, pyasn1-modules, protobuf, platformdirs, pkgutil-resolve-name, Pillow, ordered-set, omegaconf, oauthlib, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, numpy, networkx, murmurhash, multidict, mdurl, llvmlite, langcodes, importlib-resources, grpcio, future, frozenlist, filelock, fastprogress, defusedxml, click, catalogue, cachetools, async-timeout, absl-py, yarl, virtualenv, typer, tifffile, tensorboardX, srsly, scipy, responses, requests-oauthlib, PyWavelets, pytesseract, pydantic, pyarrow, preshed, patsy, pandas, nvidia-cudnn-cu11, numba, nptyping, nltk, markdown-it-py, markdown, lightning-utilities, jsonschema, huggingface-hub, google-auth, fastcore, deprecated, blis, beautifulsoup4, aiosignal, xgboost, transformers, torch, statsmodels, scikit-image, rich, ray, pathy, model-index, hyperopt, google-auth-oauthlib, gluonts, gdown, fastdownload, confection, catboost, aiohttp, torchvision, torchmetrics, thinc, tensorboard, statsforecast, sktime, seqeval, pytorch-metric-learning, pmdarima, openmim, nlpaug, lightgbm, fairscale, accelerate, timm, tbats, spacy, pytorch-lightning, datasets, autogluon.common, fastai, evaluate, autogluon.features, autogluon.core, autogluon.tabular, autogluon.multimodal, autogluon.timeseries, autogluon
-      Attempting uninstall: typing-extensions
-        Found existing installation: typing_extensions 4.0.1
-        Uninstalling typing_extensions-4.0.1:
-          Successfully uninstalled typing_extensions-4.0.1
-      Attempting uninstall: tqdm
-        Found existing installation: tqdm 4.39.0
-        Uninstalling tqdm-4.39.0:
-          Successfully uninstalled tqdm-4.39.0
-      Attempting uninstall: python-dateutil
-        Found existing installation: python-dateutil 2.8.0
-        Uninstalling python-dateutil-2.8.0:
-          Successfully uninstalled python-dateutil-2.8.0
-      Attempting uninstall: protobuf
-        Found existing installation: protobuf 3.19.3
-        Uninstalling protobuf-3.19.3:
-          Successfully uninstalled protobuf-3.19.3
-      Attempting uninstall: Pillow
-        Found existing installation: Pillow 9.0.0
-        Uninstalling Pillow-9.0.0:
-          Successfully uninstalled Pillow-9.0.0
-      Attempting uninstall: numpy
-        Found existing installation: numpy 1.19.1
-        Uninstalling numpy-1.19.1:
-          Successfully uninstalled numpy-1.19.1
-      Attempting uninstall: llvmlite
-        Found existing installation: llvmlite 0.38.0
-        Uninstalling llvmlite-0.38.0:
-          Successfully uninstalled llvmlite-0.38.0
-      Attempting uninstall: scipy
-        Found existing installation: scipy 1.7.0
-        Uninstalling scipy-1.7.0:
-          Successfully uninstalled scipy-1.7.0
-      Attempting uninstall: pyarrow
-        Found existing installation: pyarrow 6.0.1
-        Uninstalling pyarrow-6.0.1:
-          Successfully uninstalled pyarrow-6.0.1
-      Attempting uninstall: pandas
-        Found existing installation: pandas 1.3.0
-        Uninstalling pandas-1.3.0:
-          Successfully uninstalled pandas-1.3.0
-      Attempting uninstall: numba
-        Found existing installation: numba 0.55.0
-        Uninstalling numba-0.55.0:
-          Successfully uninstalled numba-0.55.0
-    Successfully installed Pillow-9.5.0 PySocks-1.7.1 PyWavelets-1.4.1 absl-py-1.4.0 accelerate-0.16.0 aiohttp-3.8.4 aiosignal-1.3.1 antlr4-python3-runtime-4.9.3 async-timeout-4.0.2 autogluon-0.7.0 autogluon.common-0.7.0 autogluon.core-0.7.0 autogluon.features-0.7.0 autogluon.multimodal-0.7.0 autogluon.tabular-0.7.0 autogluon.timeseries-0.7.0 beautifulsoup4-4.12.2 blis-0.7.9 cachetools-5.3.1 catalogue-2.0.8 catboost-1.1.1 click-8.1.3 confection-0.0.4 cymem-2.0.7 datasets-2.12.0 defusedxml-0.7.1 deprecated-1.2.14 distlib-0.3.6 evaluate-0.3.0 fairscale-0.4.13 fastai-2.7.12 fastcore-1.5.29 fastdownload-0.0.7 fastprogress-1.0.3 filelock-3.12.0 frozenlist-1.3.3 future-0.18.3 gdown-4.7.1 gluonts-0.12.8 google-auth-2.19.0 google-auth-oauthlib-1.0.0 grpcio-1.54.2 huggingface-hub-0.15.0 hyperopt-0.2.7 importlib-resources-5.12.0 jsonschema-4.17.3 langcodes-3.3.0 lightgbm-3.3.5 lightning-utilities-0.8.0 llvmlite-0.40.0 markdown-3.4.3 markdown-it-py-2.2.0 mdurl-0.1.2 model-index-0.1.11 msgpack-1.0.5 multidict-6.0.4 murmurhash-1.0.9 networkx-2.8.8 nlpaug-1.1.11 nltk-3.8.1 nptyping-2.4.1 numba-0.57.0 numpy-1.22.4 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 oauthlib-3.2.2 omegaconf-2.2.3 openmim-0.3.7 ordered-set-4.1.0 pandas-1.5.3 pathy-0.10.1 patsy-0.5.3 pkgutil-resolve-name-1.3.10 platformdirs-3.5.1 pmdarima-1.8.5 preshed-3.0.8 protobuf-3.20.3 py4j-0.10.9.7 pyDeprecate-0.3.2 pyarrow-12.0.0 pyasn1-modules-0.3.0 pydantic-1.10.8 pyrsistent-0.19.3 pytesseract-0.3.10 python-dateutil-2.8.2 pytorch-lightning-1.9.5 pytorch-metric-learning-1.7.3 ray-2.2.0 regex-2023.5.5 requests-oauthlib-1.3.1 responses-0.18.0 rich-13.4.1 scikit-image-0.19.3 scipy-1.10.1 sentencepiece-0.1.99 seqeval-1.2.2 sktime-0.15.1 smart-open-6.3.0 soupsieve-2.4.1 spacy-3.5.3 spacy-legacy-3.0.12 spacy-loggers-1.0.4 srsly-2.4.6 statsforecast-1.4.0 statsmodels-0.13.5 tbats-1.1.3 tensorboard-2.13.0 tensorboard-data-server-0.7.0 tensorboardX-2.6 text-unidecode-1.3 thinc-8.1.10 tifffile-2023.4.12 timm-0.6.13 tokenizers-0.13.3 toolz-0.12.0 torch-1.13.1 torchmetrics-0.8.2 torchvision-0.14.1 tqdm-4.65.0 transformers-4.26.1 typer-0.7.0 typing-extensions-4.6.2 ujson-5.7.0 virtualenv-20.23.0 wasabi-1.1.1 wrapt-1.15.0 xgboost-1.7.5 xxhash-3.2.0 yarl-1.9.2
-    [33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m[33m
-    [0m
-
 ### Setup Kaggle API Key
 
 
@@ -603,7 +61,7 @@ Below is example of steps to get the API username and key. Each student will hav
 ```
 
     [33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m[33m
-    [0mbike-sharing-demand.zip: Skipping, found more recently modified local copy (use --force to force download)
+    [0m401 - Unauthorized
     Archive:  bike-sharing-demand.zip
       inflating: sampleSubmission.csv    
       inflating: test.csv                
@@ -623,14 +81,10 @@ import autogluon.core as ag
 from autogluon.tabular import TabularPredictor
 ```
 
-    /usr/local/lib/python3.8/dist-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-      from .autonotebook import tqdm as notebook_tqdm
-
-
 
 ```python
 kaggle_username = "siddp6"
-kaggle_key = "2e5f7520d0f1ef3e8e133d6b1241caf9"
+kaggle_key = "d4dacbd687dea298b1a64e8ce809636c"
 
 with open("/root/.kaggle/kaggle.json", "w") as f:
     f.write(json.dumps({"username": kaggle_username, "key": kaggle_key}))
@@ -1134,18 +588,18 @@ predictor = TabularPredictor(
 
 ```
 
-    No path specified. Models will be saved in: "AutogluonModels/ag-20230601_143631/"
+    No path specified. Models will be saved in: "AutogluonModels/ag-20230602_140913/"
 
 
 
 ```python
-predictor.fit(train_data=train, time_limit=120, presets="best_quality")
+predictor.fit(train_data=train, time_limit=600, presets="best_quality")
 ```
 
     Presets specified: ['best_quality']
     Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
-    Beginning AutoGluon training ... Time limit = 120s
-    AutoGluon will save models to "AutogluonModels/ag-20230601_143631/"
+    Beginning AutoGluon training ... Time limit = 600s
+    AutoGluon will save models to "AutogluonModels/ag-20230602_140913/"
     AutoGluon Version:  0.7.0
     Python Version:     3.8.10
     Operating System:   Linux
@@ -1158,7 +612,7 @@ predictor.fit(train_data=train, time_limit=120, presets="best_quality")
     Using Feature Generators to preprocess the data ...
     Dropping user-specified ignored columns: ['casual', 'registered']
     Fitting AutoMLPipelineFeatureGenerator...
-    	Available Memory:                    3058.78 MB
+    	Available Memory:                    2582.34 MB
     	Train Data (Original)  Memory Usage: 0.78 MB (0.0% of available memory)
     	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
     	Stage 1 Generators:
@@ -1183,56 +637,100 @@ predictor.fit(train_data=train, time_limit=120, presets="best_quality")
     	0.1s = Fit runtime
     	9 features in original data used to generate 13 features in processed data.
     	Train Data (Processed) Memory Usage: 0.98 MB (0.0% of available memory)
-    Data preprocessing and feature engineering runtime = 0.12s ...
+    Data preprocessing and feature engineering runtime = 0.11s ...
     AutoGluon will gauge predictive performance using evaluation metric: 'root_mean_squared_error'
     	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
     	To change this, specify the eval_metric parameter of Predictor()
     AutoGluon will fit 2 stack levels (L1 to L2) ...
     Fitting 11 L1 models ...
-    Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 79.89s of the 119.87s of remaining time.
+    Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 399.83s of the 599.89s of remaining time.
     	-101.5462	 = Validation score   (-root_mean_squared_error)
-    	0.04s	 = Training   runtime
-    	0.05s	 = Validation runtime
-    Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 76.2s of the 116.17s of remaining time.
+    	0.03s	 = Training   runtime
+    	0.04s	 = Validation runtime
+    Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 399.63s of the 599.69s of remaining time.
     	-84.1251	 = Validation score   (-root_mean_squared_error)
     	0.03s	 = Training   runtime
     	0.04s	 = Validation runtime
-    Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 75.99s of the 115.96s of remaining time.
+    Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 399.43s of the 599.49s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
     	-131.4609	 = Validation score   (-root_mean_squared_error)
-    	58.24s	 = Training   runtime
-    	9.85s	 = Validation runtime
-    Fitting model: LightGBM_BAG_L1 ... Training model for up to 8.93s of the 48.9s of remaining time.
+    	58.46s	 = Training   runtime
+    	7.33s	 = Validation runtime
+    Fitting model: LightGBM_BAG_L1 ... Training model for up to 335.63s of the 535.69s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-131.0771	 = Validation score   (-root_mean_squared_error)
-    	21.46s	 = Training   runtime
-    	1.42s	 = Validation runtime
+    	-131.0542	 = Validation score   (-root_mean_squared_error)
+    	23.35s	 = Training   runtime
+    	1.38s	 = Validation runtime
+    Fitting model: RandomForestMSE_BAG_L1 ... Training model for up to 308.66s of the 508.72s of remaining time.
+    	-116.5443	 = Validation score   (-root_mean_squared_error)
+    	10.34s	 = Training   runtime
+    	0.55s	 = Validation runtime
+    Fitting model: CatBoost_BAG_L1 ... Training model for up to 295.19s of the 495.25s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-130.4943	 = Validation score   (-root_mean_squared_error)
+    	206.11s	 = Training   runtime
+    	0.11s	 = Validation runtime
+    Fitting model: ExtraTreesMSE_BAG_L1 ... Training model for up to 85.26s of the 285.32s of remaining time.
+    	-124.5881	 = Validation score   (-root_mean_squared_error)
+    	5.07s	 = Training   runtime
+    	0.52s	 = Validation runtime
+    Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 77.14s of the 277.2s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-136.4229	 = Validation score   (-root_mean_squared_error)
+    	85.4s	 = Training   runtime
+    	0.29s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.88s of the 23.52s of remaining time.
+    Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 188.4s of remaining time.
     	-84.1251	 = Validation score   (-root_mean_squared_error)
-    	0.26s	 = Training   runtime
+    	0.51s	 = Training   runtime
     	0.0s	 = Validation runtime
     Fitting 9 L2 models ...
-    Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 23.2s of the 23.19s of remaining time.
+    Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 187.81s of the 187.8s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-61.1166	 = Validation score   (-root_mean_squared_error)
-    	36.24s	 = Training   runtime
-    	3.18s	 = Validation runtime
+    	-60.2497	 = Validation score   (-root_mean_squared_error)
+    	45.63s	 = Training   runtime
+    	3.33s	 = Validation runtime
+    Fitting model: LightGBM_BAG_L2 ... Training model for up to 137.45s of the 137.43s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-55.2229	 = Validation score   (-root_mean_squared_error)
+    	18.08s	 = Training   runtime
+    	0.34s	 = Validation runtime
+    Fitting model: RandomForestMSE_BAG_L2 ... Training model for up to 115.82s of the 115.8s of remaining time.
+    	-53.3947	 = Validation score   (-root_mean_squared_error)
+    	25.77s	 = Training   runtime
+    	0.59s	 = Validation runtime
+    Fitting model: CatBoost_BAG_L2 ... Training model for up to 86.6s of the 86.59s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-55.7409	 = Validation score   (-root_mean_squared_error)
+    	63.41s	 = Training   runtime
+    	0.07s	 = Validation runtime
+    Fitting model: ExtraTreesMSE_BAG_L2 ... Training model for up to 20.11s of the 20.09s of remaining time.
+    	-53.971	 = Validation score   (-root_mean_squared_error)
+    	7.84s	 = Training   runtime
+    	0.59s	 = Validation runtime
+    Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 9.18s of the 9.16s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-89.4179	 = Validation score   (-root_mean_squared_error)
+    	28.81s	 = Training   runtime
+    	0.41s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L3 ... Training model for up to 119.88s of the -17.5s of remaining time.
-    	-61.1166	 = Validation score   (-root_mean_squared_error)
-    	0.01s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the -22.77s of remaining time.
+    	-52.8718	 = Validation score   (-root_mean_squared_error)
+    	0.38s	 = Training   runtime
     	0.0s	 = Validation runtime
-    AutoGluon training complete, total runtime = 137.71s ... Best model: "WeightedEnsemble_L3"
-    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230601_143631/")
+    AutoGluon training complete, total runtime = 623.35s ... Best model: "WeightedEnsemble_L3"
+    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230602_140913/")
 
 
 
 
 
-    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fe07cbc6dc0>
+    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fbaa9143fd0>
 
 
+
+__presets="best_quality"__
+- This argument specifies the preset configuration for the fitting process. In this case, the preset named "best_quality" is being used, indicating that the model should be trained with settings optimized for best quality
 
 ### Review AutoGluon's training run with ranking of models that did the best.
 
@@ -1243,17 +741,26 @@ predictor.fit_summary()
 
     *** Summary of fit() ***
     Estimated performance of each model:
-                       model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0      LightGBMXT_BAG_L2  -61.116628      14.533524  116.015757                3.184328          36.244766            2       True          6
-    1    WeightedEnsemble_L3  -61.116628      14.534755  116.020841                0.001231           0.005084            3       True          7
-    2  KNeighborsDist_BAG_L1  -84.125061       0.038734    0.029795                0.038734           0.029795            1       True          2
-    3    WeightedEnsemble_L2  -84.125061       0.039469    0.285632                0.000736           0.255837            2       True          5
-    4  KNeighborsUnif_BAG_L1 -101.546199       0.045319    0.040213                0.045319           0.040213            1       True          1
-    5        LightGBM_BAG_L1 -131.077080       1.415203   21.460628                1.415203          21.460628            1       True          4
-    6      LightGBMXT_BAG_L1 -131.460909       9.849940   58.240355                9.849940          58.240355            1       True          3
-    Number of models trained: 7
+                         model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0      WeightedEnsemble_L3  -52.871786      11.857781  504.274996                0.000988           0.379923            3       True         16
+    1   RandomForestMSE_BAG_L2  -53.394699      10.855326  414.564875                0.588785          25.766391            2       True         12
+    2     ExtraTreesMSE_BAG_L2  -53.970980      10.858333  396.636239                0.591793           7.837756            2       True         14
+    3          LightGBM_BAG_L2  -55.222937      10.603344  406.876146                0.336803          18.077662            2       True         11
+    4          CatBoost_BAG_L2  -55.740858      10.339412  452.213264                0.072871          63.414780            2       True         13
+    5        LightGBMXT_BAG_L2  -60.249680      13.601524  434.424200                3.334984          45.625717            2       True         10
+    6    KNeighborsDist_BAG_L1  -84.125061       0.039831    0.030210                0.039831           0.030210            1       True          2
+    7      WeightedEnsemble_L2  -84.125061       0.040823    0.536962                0.000992           0.506751            2       True          9
+    8   NeuralNetFastAI_BAG_L2  -89.417853      10.674562  417.607085                0.408021          28.808601            2       True         15
+    9    KNeighborsUnif_BAG_L1 -101.546199       0.042448    0.033091                0.042448           0.033091            1       True          1
+    10  RandomForestMSE_BAG_L1 -116.544294       0.550746   10.336879                0.550746          10.336879            1       True          5
+    11    ExtraTreesMSE_BAG_L1 -124.588053       0.521388    5.073255                0.521388           5.073255            1       True          7
+    12         CatBoost_BAG_L1 -130.494282       0.113710  206.109985                0.113710         206.109985            1       True          6
+    13         LightGBM_BAG_L1 -131.054162       1.382986   23.353068                1.382986          23.353068            1       True          4
+    14       LightGBMXT_BAG_L1 -131.460909       7.326296   58.462367                7.326296          58.462367            1       True          3
+    15  NeuralNetFastAI_BAG_L1 -136.422927       0.289136   85.399628                0.289136          85.399628            1       True          8
+    Number of models trained: 16
     Types of models trained:
-    {'WeightedEnsembleModel', 'StackerEnsembleModel_LGB', 'StackerEnsembleModel_KNN'}
+    {'WeightedEnsembleModel', 'StackerEnsembleModel_LGB', 'StackerEnsembleModel_KNN', 'StackerEnsembleModel_XT', 'StackerEnsembleModel_NNFastAiTabular', 'StackerEnsembleModel_CatBoost', 'StackerEnsembleModel_RF'}
     Bagging used: True  (with 8 folds)
     Multi-layer stack-ensembling used: True  (with 3 levels)
     Feature Metadata (Processed):
@@ -1262,7 +769,7 @@ predictor.fit_summary()
     ('int', [])                  : 3 | ['season', 'weather', 'humidity']
     ('int', ['bool'])            : 2 | ['holiday', 'workingday']
     ('int', ['datetime_as_int']) : 5 | ['datetime', 'datetime.year', 'datetime.month', 'datetime.day', 'datetime.dayofweek']
-    Plot summary of models saved to file: AutogluonModels/ag-20230601_143631/SummaryOfModels.html
+    Plot summary of models saved to file: AutogluonModels/ag-20230602_140913/SummaryOfModels.html
     *** End of fit() summary ***
 
 
@@ -1273,38 +780,83 @@ predictor.fit_summary()
       'KNeighborsDist_BAG_L1': 'StackerEnsembleModel_KNN',
       'LightGBMXT_BAG_L1': 'StackerEnsembleModel_LGB',
       'LightGBM_BAG_L1': 'StackerEnsembleModel_LGB',
+      'RandomForestMSE_BAG_L1': 'StackerEnsembleModel_RF',
+      'CatBoost_BAG_L1': 'StackerEnsembleModel_CatBoost',
+      'ExtraTreesMSE_BAG_L1': 'StackerEnsembleModel_XT',
+      'NeuralNetFastAI_BAG_L1': 'StackerEnsembleModel_NNFastAiTabular',
       'WeightedEnsemble_L2': 'WeightedEnsembleModel',
       'LightGBMXT_BAG_L2': 'StackerEnsembleModel_LGB',
+      'LightGBM_BAG_L2': 'StackerEnsembleModel_LGB',
+      'RandomForestMSE_BAG_L2': 'StackerEnsembleModel_RF',
+      'CatBoost_BAG_L2': 'StackerEnsembleModel_CatBoost',
+      'ExtraTreesMSE_BAG_L2': 'StackerEnsembleModel_XT',
+      'NeuralNetFastAI_BAG_L2': 'StackerEnsembleModel_NNFastAiTabular',
       'WeightedEnsemble_L3': 'WeightedEnsembleModel'},
      'model_performance': {'KNeighborsUnif_BAG_L1': -101.54619908446061,
       'KNeighborsDist_BAG_L1': -84.12506123181602,
       'LightGBMXT_BAG_L1': -131.46090891834504,
-      'LightGBM_BAG_L1': -131.0770800258179,
+      'LightGBM_BAG_L1': -131.054161598899,
+      'RandomForestMSE_BAG_L1': -116.54429428704391,
+      'CatBoost_BAG_L1': -130.4942815936897,
+      'ExtraTreesMSE_BAG_L1': -124.58805258915959,
+      'NeuralNetFastAI_BAG_L1': -136.4229269757243,
       'WeightedEnsemble_L2': -84.12506123181602,
-      'LightGBMXT_BAG_L2': -61.11662760935856,
-      'WeightedEnsemble_L3': -61.11662760935856},
+      'LightGBMXT_BAG_L2': -60.24967971756835,
+      'LightGBM_BAG_L2': -55.222936989316864,
+      'RandomForestMSE_BAG_L2': -53.394699339768025,
+      'CatBoost_BAG_L2': -55.74085797861888,
+      'ExtraTreesMSE_BAG_L2': -53.970980367781415,
+      'NeuralNetFastAI_BAG_L2': -89.41785326447096,
+      'WeightedEnsemble_L3': -52.871786174178695},
      'model_best': 'WeightedEnsemble_L3',
-     'model_paths': {'KNeighborsUnif_BAG_L1': 'AutogluonModels/ag-20230601_143631/models/KNeighborsUnif_BAG_L1/',
-      'KNeighborsDist_BAG_L1': 'AutogluonModels/ag-20230601_143631/models/KNeighborsDist_BAG_L1/',
-      'LightGBMXT_BAG_L1': 'AutogluonModels/ag-20230601_143631/models/LightGBMXT_BAG_L1/',
-      'LightGBM_BAG_L1': 'AutogluonModels/ag-20230601_143631/models/LightGBM_BAG_L1/',
-      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230601_143631/models/WeightedEnsemble_L2/',
-      'LightGBMXT_BAG_L2': 'AutogluonModels/ag-20230601_143631/models/LightGBMXT_BAG_L2/',
-      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230601_143631/models/WeightedEnsemble_L3/'},
-     'model_fit_times': {'KNeighborsUnif_BAG_L1': 0.04021286964416504,
-      'KNeighborsDist_BAG_L1': 0.029795408248901367,
-      'LightGBMXT_BAG_L1': 58.240354776382446,
-      'LightGBM_BAG_L1': 21.460627794265747,
-      'WeightedEnsemble_L2': 0.25583696365356445,
-      'LightGBMXT_BAG_L2': 36.244765758514404,
-      'WeightedEnsemble_L3': 0.00508427619934082},
-     'model_pred_times': {'KNeighborsUnif_BAG_L1': 0.045318603515625,
-      'KNeighborsDist_BAG_L1': 0.03873395919799805,
-      'LightGBMXT_BAG_L1': 9.849940299987793,
-      'LightGBM_BAG_L1': 1.4152026176452637,
-      'WeightedEnsemble_L2': 0.0007355213165283203,
-      'LightGBMXT_BAG_L2': 3.184328317642212,
-      'WeightedEnsemble_L3': 0.0012314319610595703},
+     'model_paths': {'KNeighborsUnif_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/KNeighborsUnif_BAG_L1/',
+      'KNeighborsDist_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/KNeighborsDist_BAG_L1/',
+      'LightGBMXT_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/LightGBMXT_BAG_L1/',
+      'LightGBM_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/LightGBM_BAG_L1/',
+      'RandomForestMSE_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/RandomForestMSE_BAG_L1/',
+      'CatBoost_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/CatBoost_BAG_L1/',
+      'ExtraTreesMSE_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/ExtraTreesMSE_BAG_L1/',
+      'NeuralNetFastAI_BAG_L1': 'AutogluonModels/ag-20230602_140913/models/NeuralNetFastAI_BAG_L1/',
+      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230602_140913/models/WeightedEnsemble_L2/',
+      'LightGBMXT_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/LightGBMXT_BAG_L2/',
+      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/LightGBM_BAG_L2/',
+      'RandomForestMSE_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/RandomForestMSE_BAG_L2/',
+      'CatBoost_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/CatBoost_BAG_L2/',
+      'ExtraTreesMSE_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/ExtraTreesMSE_BAG_L2/',
+      'NeuralNetFastAI_BAG_L2': 'AutogluonModels/ag-20230602_140913/models/NeuralNetFastAI_BAG_L2/',
+      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230602_140913/models/WeightedEnsemble_L3/'},
+     'model_fit_times': {'KNeighborsUnif_BAG_L1': 0.03309130668640137,
+      'KNeighborsDist_BAG_L1': 0.030210256576538086,
+      'LightGBMXT_BAG_L1': 58.462366819381714,
+      'LightGBM_BAG_L1': 23.353067874908447,
+      'RandomForestMSE_BAG_L1': 10.336879014968872,
+      'CatBoost_BAG_L1': 206.1099853515625,
+      'ExtraTreesMSE_BAG_L1': 5.073254823684692,
+      'NeuralNetFastAI_BAG_L1': 85.39962816238403,
+      'WeightedEnsemble_L2': 0.506751298904419,
+      'LightGBMXT_BAG_L2': 45.62571668624878,
+      'LightGBM_BAG_L2': 18.077661991119385,
+      'RandomForestMSE_BAG_L2': 25.766391038894653,
+      'CatBoost_BAG_L2': 63.41477990150452,
+      'ExtraTreesMSE_BAG_L2': 7.8377556800842285,
+      'NeuralNetFastAI_BAG_L2': 28.808601140975952,
+      'WeightedEnsemble_L3': 0.37992334365844727},
+     'model_pred_times': {'KNeighborsUnif_BAG_L1': 0.04244804382324219,
+      'KNeighborsDist_BAG_L1': 0.039830923080444336,
+      'LightGBMXT_BAG_L1': 7.326295614242554,
+      'LightGBM_BAG_L1': 1.3829855918884277,
+      'RandomForestMSE_BAG_L1': 0.550745964050293,
+      'CatBoost_BAG_L1': 0.11371016502380371,
+      'ExtraTreesMSE_BAG_L1': 0.5213878154754639,
+      'NeuralNetFastAI_BAG_L1': 0.2891364097595215,
+      'WeightedEnsemble_L2': 0.0009920597076416016,
+      'LightGBMXT_BAG_L2': 3.3349838256835938,
+      'LightGBM_BAG_L2': 0.3368031978607178,
+      'RandomForestMSE_BAG_L2': 0.5887854099273682,
+      'CatBoost_BAG_L2': 0.07287144660949707,
+      'ExtraTreesMSE_BAG_L2': 0.5917925834655762,
+      'NeuralNetFastAI_BAG_L2': 0.4080214500427246,
+      'WeightedEnsemble_L3': 0.0009875297546386719},
      'num_bag_folds': 8,
      'max_stack_level': 3,
      'model_hyperparams': {'KNeighborsUnif_BAG_L1': {'use_orig_features': True,
@@ -1325,6 +877,24 @@ predictor.fit_summary()
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True},
+      'RandomForestMSE_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'CatBoost_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'ExtraTreesMSE_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'NeuralNetFastAI_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
       'WeightedEnsemble_L2': {'use_orig_features': False,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
@@ -1333,36 +903,85 @@ predictor.fit_summary()
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True},
+      'LightGBM_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'RandomForestMSE_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'CatBoost_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'ExtraTreesMSE_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'NeuralNetFastAI_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
       'WeightedEnsemble_L3': {'use_orig_features': False,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True}},
-     'leaderboard':                    model   score_val  pred_time_val    fit_time  \
-     0      LightGBMXT_BAG_L2  -61.116628      14.533524  116.015757   
-     1    WeightedEnsemble_L3  -61.116628      14.534755  116.020841   
-     2  KNeighborsDist_BAG_L1  -84.125061       0.038734    0.029795   
-     3    WeightedEnsemble_L2  -84.125061       0.039469    0.285632   
-     4  KNeighborsUnif_BAG_L1 -101.546199       0.045319    0.040213   
-     5        LightGBM_BAG_L1 -131.077080       1.415203   21.460628   
-     6      LightGBMXT_BAG_L1 -131.460909       9.849940   58.240355   
+     'leaderboard':                      model   score_val  pred_time_val    fit_time  \
+     0      WeightedEnsemble_L3  -52.871786      11.857781  504.274996   
+     1   RandomForestMSE_BAG_L2  -53.394699      10.855326  414.564875   
+     2     ExtraTreesMSE_BAG_L2  -53.970980      10.858333  396.636239   
+     3          LightGBM_BAG_L2  -55.222937      10.603344  406.876146   
+     4          CatBoost_BAG_L2  -55.740858      10.339412  452.213264   
+     5        LightGBMXT_BAG_L2  -60.249680      13.601524  434.424200   
+     6    KNeighborsDist_BAG_L1  -84.125061       0.039831    0.030210   
+     7      WeightedEnsemble_L2  -84.125061       0.040823    0.536962   
+     8   NeuralNetFastAI_BAG_L2  -89.417853      10.674562  417.607085   
+     9    KNeighborsUnif_BAG_L1 -101.546199       0.042448    0.033091   
+     10  RandomForestMSE_BAG_L1 -116.544294       0.550746   10.336879   
+     11    ExtraTreesMSE_BAG_L1 -124.588053       0.521388    5.073255   
+     12         CatBoost_BAG_L1 -130.494282       0.113710  206.109985   
+     13         LightGBM_BAG_L1 -131.054162       1.382986   23.353068   
+     14       LightGBMXT_BAG_L1 -131.460909       7.326296   58.462367   
+     15  NeuralNetFastAI_BAG_L1 -136.422927       0.289136   85.399628   
      
-        pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
-     0                3.184328          36.244766            2       True   
-     1                0.001231           0.005084            3       True   
-     2                0.038734           0.029795            1       True   
-     3                0.000736           0.255837            2       True   
-     4                0.045319           0.040213            1       True   
-     5                1.415203          21.460628            1       True   
-     6                9.849940          58.240355            1       True   
+         pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
+     0                 0.000988           0.379923            3       True   
+     1                 0.588785          25.766391            2       True   
+     2                 0.591793           7.837756            2       True   
+     3                 0.336803          18.077662            2       True   
+     4                 0.072871          63.414780            2       True   
+     5                 3.334984          45.625717            2       True   
+     6                 0.039831           0.030210            1       True   
+     7                 0.000992           0.506751            2       True   
+     8                 0.408021          28.808601            2       True   
+     9                 0.042448           0.033091            1       True   
+     10                0.550746          10.336879            1       True   
+     11                0.521388           5.073255            1       True   
+     12                0.113710         206.109985            1       True   
+     13                1.382986          23.353068            1       True   
+     14                7.326296          58.462367            1       True   
+     15                0.289136          85.399628            1       True   
      
-        fit_order  
-     0          6  
-     1          7  
-     2          2  
-     3          5  
-     4          1  
-     5          4  
-     6          3  }
+         fit_order  
+     0          16  
+     1          12  
+     2          14  
+     3          11  
+     4          13  
+     5          10  
+     6           2  
+     7           9  
+     8          15  
+     9           1  
+     10          5  
+     11          7  
+     12          6  
+     13          4  
+     14          3  
+     15          8  }
 
 
 
@@ -1373,21 +992,33 @@ leaderboard_df.plot(kind="bar", x="model", y="score_val", figsize=(14, 7))
 plt.show()
 ```
 
-                       model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0      LightGBMXT_BAG_L2  -61.116628      14.533524  116.015757                3.184328          36.244766            2       True          6
-    1    WeightedEnsemble_L3  -61.116628      14.534755  116.020841                0.001231           0.005084            3       True          7
-    2  KNeighborsDist_BAG_L1  -84.125061       0.038734    0.029795                0.038734           0.029795            1       True          2
-    3    WeightedEnsemble_L2  -84.125061       0.039469    0.285632                0.000736           0.255837            2       True          5
-    4  KNeighborsUnif_BAG_L1 -101.546199       0.045319    0.040213                0.045319           0.040213            1       True          1
-    5        LightGBM_BAG_L1 -131.077080       1.415203   21.460628                1.415203          21.460628            1       True          4
-    6      LightGBMXT_BAG_L1 -131.460909       9.849940   58.240355                9.849940          58.240355            1       True          3
+                         model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0      WeightedEnsemble_L3  -52.871786      11.857781  504.274996                0.000988           0.379923            3       True         16
+    1   RandomForestMSE_BAG_L2  -53.394699      10.855326  414.564875                0.588785          25.766391            2       True         12
+    2     ExtraTreesMSE_BAG_L2  -53.970980      10.858333  396.636239                0.591793           7.837756            2       True         14
+    3          LightGBM_BAG_L2  -55.222937      10.603344  406.876146                0.336803          18.077662            2       True         11
+    4          CatBoost_BAG_L2  -55.740858      10.339412  452.213264                0.072871          63.414780            2       True         13
+    5        LightGBMXT_BAG_L2  -60.249680      13.601524  434.424200                3.334984          45.625717            2       True         10
+    6    KNeighborsDist_BAG_L1  -84.125061       0.039831    0.030210                0.039831           0.030210            1       True          2
+    7      WeightedEnsemble_L2  -84.125061       0.040823    0.536962                0.000992           0.506751            2       True          9
+    8   NeuralNetFastAI_BAG_L2  -89.417853      10.674562  417.607085                0.408021          28.808601            2       True         15
+    9    KNeighborsUnif_BAG_L1 -101.546199       0.042448    0.033091                0.042448           0.033091            1       True          1
+    10  RandomForestMSE_BAG_L1 -116.544294       0.550746   10.336879                0.550746          10.336879            1       True          5
+    11    ExtraTreesMSE_BAG_L1 -124.588053       0.521388    5.073255                0.521388           5.073255            1       True          7
+    12         CatBoost_BAG_L1 -130.494282       0.113710  206.109985                0.113710         206.109985            1       True          6
+    13         LightGBM_BAG_L1 -131.054162       1.382986   23.353068                1.382986          23.353068            1       True          4
+    14       LightGBMXT_BAG_L1 -131.460909       7.326296   58.462367                7.326296          58.462367            1       True          3
+    15  NeuralNetFastAI_BAG_L1 -136.422927       0.289136   85.399628                0.289136          85.399628            1       True          8
 
 
 
     
-![png](output_27_1.png)
+![png](output_28_1.png)
     
 
+
+Insight
+- a very intersting things here is that top result giving is L_3, other are L_2 level and base models (L_1) does not seem to perform good here.
 
 ### Create predictions from test dataset
 
@@ -1400,11 +1031,11 @@ predictions.head()
 
 
 
-    0    36.413548
-    1    42.656593
-    2    49.778008
-    3    52.446659
-    4    55.068695
+    0    23.123632
+    1    41.455280
+    2    45.221096
+    3    49.122555
+    4    52.208115
     Name: count, dtype: float32
 
 
@@ -1429,7 +1060,7 @@ submission.to_csv("submission.csv", index=False)
 !kaggle competitions submit -c bike-sharing-demand -f submission.csv -m "Initial Submission"
 ```
 
-    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 370kB/s]
+    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 395kB/s]
     Successfully submitted to Bike Sharing Demand
 
 #### View submission via the command line or in the web browser under the competition's page - `My Submissions`
@@ -1441,14 +1072,14 @@ submission.to_csv("submission.csv", index=False)
 
     fileName                     date                 description                                                                                         status    publicScore  privateScore  
     ---------------------------  -------------------  --------------------------------------------------------------------------------------------------  --------  -----------  ------------  
-    submission.csv               2023-06-01 14:39:34  Initial Submission                                                                                  pending                              
-    submission_new_hyp_3.csv     2023-06-01 07:29:37  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  complete  0.50079      0.50079       
-    submission_new_hyp_2.csv     2023-06-01 07:29:35  new features with hyperparameters epoch, boost round, learning rate, extra trees                    complete  0.65221      0.65221       
-    submission_new_hyp_1.csv     2023-06-01 07:29:33  new features with hyperparameters epoch, boost round                                                complete  0.60933      0.60933       
+    submission.csv               2023-06-02 14:26:04  Initial Submission                                                                                  complete  1.80958      1.80958       
+    submission_new_hyp_3.csv     2023-06-01 14:50:49  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  complete  0.49945      0.49945       
+    submission_new_hyp_2.csv     2023-06-01 14:50:46  new features with hyperparameters epoch, boost round, learning rate, extra trees                    complete  0.65221      0.65221       
+    submission_new_hyp_1.csv     2023-06-01 14:50:44  new features with hyperparameters epoch, boost round                                                complete  0.60783      0.60783       
     tail: write error: Broken pipe
 
 
-#### Initial score of 2.06204     
+#### Initial score of 1.80958
 
 ## Step 4: Exploratory Data Analysis and Creating an additional feature
 * Any additional feature will do, but a great suggestion would be to separate out the datetime into hour, day, or month parts.
@@ -1462,8 +1093,16 @@ plt.show()
 
 
     
-![png](output_39_0.png)
+![png](output_41_0.png)
     
+
+
+Insights:
+
+- Season and weather are categorical variables, so we need to change their type as "category"
+- Datetime feature, showing randomness as they represent timestamps, so it make more sense to create new feature by considering hours and day of week
+- There are particular hour of day when people use bike most, like evening and morning. Same way people tend to do biking more on weekends. So it make complete sense to create these two as new feature.
+- Also we can safely drop datetime column
 
 
 
@@ -1860,7 +1499,7 @@ plt.show()
 
 
     
-![png](output_45_0.png)
+![png](output_48_0.png)
     
 
 
@@ -1876,18 +1515,18 @@ predictor_new_features = TabularPredictor(
 )
 ```
 
-    No path specified. Models will be saved in: "AutogluonModels/ag-20230601_143940/"
+    No path specified. Models will be saved in: "AutogluonModels/ag-20230602_143128/"
 
 
 
 ```python
-predictor_new_features.fit(train_data=train, time_limit=120, presets="best_quality")
+predictor_new_features.fit(train_data=train, time_limit=600, presets="best_quality")
 ```
 
     Presets specified: ['best_quality']
     Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
-    Beginning AutoGluon training ... Time limit = 120s
-    AutoGluon will save models to "AutogluonModels/ag-20230601_143940/"
+    Beginning AutoGluon training ... Time limit = 600s
+    AutoGluon will save models to "AutogluonModels/ag-20230602_143128/"
     AutoGluon Version:  0.7.0
     Python Version:     3.8.10
     Operating System:   Linux
@@ -1900,7 +1539,7 @@ predictor_new_features.fit(train_data=train, time_limit=120, presets="best_quali
     Using Feature Generators to preprocess the data ...
     Dropping user-specified ignored columns: ['casual', 'registered']
     Fitting AutoMLPipelineFeatureGenerator...
-    	Available Memory:                    2588.44 MB
+    	Available Memory:                    2081.49 MB
     	Train Data (Original)  Memory Usage: 0.72 MB (0.0% of available memory)
     	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
     	Stage 1 Generators:
@@ -1923,57 +1562,98 @@ predictor_new_features.fit(train_data=train, time_limit=120, presets="best_quali
     		('float', [])     : 3 | ['temp', 'atemp', 'windspeed']
     		('int', [])       : 3 | ['humidity', 'hour', 'day']
     		('int', ['bool']) : 2 | ['holiday', 'workingday']
-    	0.1s = Fit runtime
+    	0.3s = Fit runtime
     	10 features in original data used to generate 10 features in processed data.
     	Train Data (Processed) Memory Usage: 0.57 MB (0.0% of available memory)
-    Data preprocessing and feature engineering runtime = 0.1s ...
+    Data preprocessing and feature engineering runtime = 0.33s ...
     AutoGluon will gauge predictive performance using evaluation metric: 'root_mean_squared_error'
     	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
     	To change this, specify the eval_metric parameter of Predictor()
     AutoGluon will fit 2 stack levels (L1 to L2) ...
     Fitting 11 L1 models ...
-    Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 79.91s of the 119.9s of remaining time.
+    Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 399.68s of the 599.66s of remaining time.
     	-117.0607	 = Validation score   (-root_mean_squared_error)
-    	0.02s	 = Training   runtime
-    	0.09s	 = Validation runtime
-    Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 79.67s of the 119.66s of remaining time.
+    	0.03s	 = Training   runtime
+    	0.1s	 = Validation runtime
+    Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 399.42s of the 599.4s of remaining time.
     	-114.004	 = Validation score   (-root_mean_squared_error)
     	0.02s	 = Training   runtime
-    	0.1s	 = Validation runtime
-    Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 79.43s of the 119.41s of remaining time.
+    	0.09s	 = Validation runtime
+    Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 399.19s of the 599.17s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
     	-60.1971	 = Validation score   (-root_mean_squared_error)
-    	89.13s	 = Training   runtime
-    	24.77s	 = Validation runtime
+    	85.68s	 = Training   runtime
+    	17.94s	 = Validation runtime
+    Fitting model: LightGBM_BAG_L1 ... Training model for up to 308.09s of the 508.07s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-60.9531	 = Validation score   (-root_mean_squared_error)
+    	31.75s	 = Training   runtime
+    	3.2s	 = Validation runtime
+    Fitting model: RandomForestMSE_BAG_L1 ... Training model for up to 271.99s of the 471.98s of remaining time.
+    	-66.2409	 = Validation score   (-root_mean_squared_error)
+    	7.65s	 = Training   runtime
+    	0.56s	 = Validation runtime
+    Fitting model: CatBoost_BAG_L1 ... Training model for up to 261.33s of the 461.31s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-61.6041	 = Validation score   (-root_mean_squared_error)
+    	220.21s	 = Training   runtime
+    	0.21s	 = Validation runtime
+    Fitting model: ExtraTreesMSE_BAG_L1 ... Training model for up to 38.05s of the 238.03s of remaining time.
+    	-66.2385	 = Validation score   (-root_mean_squared_error)
+    	4.53s	 = Training   runtime
+    	0.55s	 = Validation runtime
+    Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 29.48s of the 229.46s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-97.7682	 = Validation score   (-root_mean_squared_error)
+    	47.22s	 = Training   runtime
+    	0.38s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.9s of the 24.13s of remaining time.
-    	-60.1251	 = Validation score   (-root_mean_squared_error)
-    	0.22s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 178.98s of remaining time.
+    	-58.8965	 = Validation score   (-root_mean_squared_error)
+    	0.44s	 = Training   runtime
     	0.0s	 = Validation runtime
     Fitting 9 L2 models ...
-    Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 23.84s of the 23.83s of remaining time.
+    Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 178.47s of the 178.45s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-60.9777	 = Validation score   (-root_mean_squared_error)
-    	16.38s	 = Training   runtime
-    	0.22s	 = Validation runtime
-    Fitting model: LightGBM_BAG_L2 ... Training model for up to 4.25s of the 4.24s of remaining time.
+    	-59.9379	 = Validation score   (-root_mean_squared_error)
+    	16.95s	 = Training   runtime
+    	0.32s	 = Validation runtime
+    Fitting model: LightGBM_BAG_L2 ... Training model for up to 157.54s of the 157.53s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-60.209	 = Validation score   (-root_mean_squared_error)
-    	14.98s	 = Training   runtime
+    	-59.6191	 = Validation score   (-root_mean_squared_error)
+    	16.55s	 = Training   runtime
     	0.11s	 = Validation runtime
+    Fitting model: RandomForestMSE_BAG_L2 ... Training model for up to 137.47s of the 137.46s of remaining time.
+    	-59.8815	 = Validation score   (-root_mean_squared_error)
+    	25.3s	 = Training   runtime
+    	0.61s	 = Validation runtime
+    Fitting model: CatBoost_BAG_L2 ... Training model for up to 109.3s of the 109.28s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-58.5872	 = Validation score   (-root_mean_squared_error)
+    	49.83s	 = Training   runtime
+    	0.08s	 = Validation runtime
+    Fitting model: ExtraTreesMSE_BAG_L2 ... Training model for up to 56.37s of the 56.35s of remaining time.
+    	-59.2367	 = Validation score   (-root_mean_squared_error)
+    	7.13s	 = Training   runtime
+    	0.6s	 = Validation runtime
+    Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 46.25s of the 46.23s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-58.517	 = Validation score   (-root_mean_squared_error)
+    	60.63s	 = Training   runtime
+    	0.51s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L3 ... Training model for up to 119.9s of the -14.47s of remaining time.
-    	-59.964	 = Validation score   (-root_mean_squared_error)
-    	0.16s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the -17.68s of remaining time.
+    	-58.197	 = Validation score   (-root_mean_squared_error)
+    	0.42s	 = Training   runtime
     	0.0s	 = Validation runtime
-    AutoGluon training complete, total runtime = 134.81s ... Best model: "WeightedEnsemble_L3"
-    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230601_143940/")
+    AutoGluon training complete, total runtime = 618.33s ... Best model: "WeightedEnsemble_L3"
+    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230602_143128/")
 
 
 
 
 
-    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fdf408fd520>
+    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fbaa7437220>
 
 
 
@@ -1984,17 +1664,26 @@ predictor_new_features.fit_summary()
 
     *** Summary of fit() ***
     Estimated performance of each model:
-                       model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0    WeightedEnsemble_L3  -59.963984      25.299021  120.690456                0.000761           0.163419            3       True          7
-    1    WeightedEnsemble_L2  -60.125100      24.873514   89.367040                0.000833           0.217180            2       True          4
-    2      LightGBMXT_BAG_L1  -60.197098      24.770082   89.127638               24.770082          89.127638            1       True          3
-    3        LightGBM_BAG_L2  -60.209039      25.080539  104.148664                0.114307          14.976510            2       True          6
-    4      LightGBMXT_BAG_L2  -60.977720      25.183953  105.550528                0.217721          16.378374            2       True          5
-    5  KNeighborsDist_BAG_L1 -114.004045       0.102599    0.022222                0.102599           0.022222            1       True          2
-    6  KNeighborsUnif_BAG_L1 -117.060748       0.093551    0.022294                0.093551           0.022294            1       True          1
-    Number of models trained: 7
+                         model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0      WeightedEnsemble_L3  -58.196982      24.230838  515.107222                0.000712           0.418559            3       True         16
+    1   NeuralNetFastAI_BAG_L2  -58.516959      23.552197  457.729084                0.506768          60.633716            2       True         15
+    2          CatBoost_BAG_L2  -58.587186      23.127257  446.929289                0.081828          49.833921            2       True         13
+    3      WeightedEnsemble_L2  -58.896532      21.919335  345.734301                0.000733           0.440368            2       True          9
+    4     ExtraTreesMSE_BAG_L2  -59.236701      23.641531  404.221027                0.596102           7.125659            2       True         14
+    5          LightGBM_BAG_L2  -59.619095      23.154006  413.641091                0.108577          16.545723            2       True         11
+    6   RandomForestMSE_BAG_L2  -59.881547      23.653731  422.400025                0.608302          25.304657            2       True         12
+    7        LightGBMXT_BAG_L2  -59.937946      23.368949  414.042805                0.323520          16.947437            2       True         10
+    8        LightGBMXT_BAG_L1  -60.197098      17.943470   85.681547               17.943470          85.681547            1       True          3
+    9          LightGBM_BAG_L1  -60.953081       3.200293   31.746621                3.200293          31.746621            1       True          4
+    10         CatBoost_BAG_L1  -61.604089       0.210660  220.212801                0.210660         220.212801            1       True          6
+    11    ExtraTreesMSE_BAG_L1  -66.238489       0.552660    4.534876                0.552660           4.534876            1       True          7
+    12  RandomForestMSE_BAG_L1  -66.240918       0.564179    7.652964                0.564179           7.652964            1       True          5
+    13  NeuralNetFastAI_BAG_L1  -97.768237       0.384564   47.220266                0.384564          47.220266            1       True          8
+    14   KNeighborsDist_BAG_L1 -114.004045       0.093814    0.020973                0.093814           0.020973            1       True          2
+    15   KNeighborsUnif_BAG_L1 -117.060748       0.095789    0.025320                0.095789           0.025320            1       True          1
+    Number of models trained: 16
     Types of models trained:
-    {'WeightedEnsembleModel', 'StackerEnsembleModel_LGB', 'StackerEnsembleModel_KNN'}
+    {'WeightedEnsembleModel', 'StackerEnsembleModel_LGB', 'StackerEnsembleModel_KNN', 'StackerEnsembleModel_XT', 'StackerEnsembleModel_NNFastAiTabular', 'StackerEnsembleModel_CatBoost', 'StackerEnsembleModel_RF'}
     Bagging used: True  (with 8 folds)
     Multi-layer stack-ensembling used: True  (with 3 levels)
     Feature Metadata (Processed):
@@ -2003,7 +1692,7 @@ predictor_new_features.fit_summary()
     ('float', [])     : 3 | ['temp', 'atemp', 'windspeed']
     ('int', [])       : 3 | ['humidity', 'hour', 'day']
     ('int', ['bool']) : 2 | ['holiday', 'workingday']
-    Plot summary of models saved to file: AutogluonModels/ag-20230601_143940/SummaryOfModels.html
+    Plot summary of models saved to file: AutogluonModels/ag-20230602_143128/SummaryOfModels.html
     *** End of fit() summary ***
 
 
@@ -2013,39 +1702,84 @@ predictor_new_features.fit_summary()
     {'model_types': {'KNeighborsUnif_BAG_L1': 'StackerEnsembleModel_KNN',
       'KNeighborsDist_BAG_L1': 'StackerEnsembleModel_KNN',
       'LightGBMXT_BAG_L1': 'StackerEnsembleModel_LGB',
+      'LightGBM_BAG_L1': 'StackerEnsembleModel_LGB',
+      'RandomForestMSE_BAG_L1': 'StackerEnsembleModel_RF',
+      'CatBoost_BAG_L1': 'StackerEnsembleModel_CatBoost',
+      'ExtraTreesMSE_BAG_L1': 'StackerEnsembleModel_XT',
+      'NeuralNetFastAI_BAG_L1': 'StackerEnsembleModel_NNFastAiTabular',
       'WeightedEnsemble_L2': 'WeightedEnsembleModel',
       'LightGBMXT_BAG_L2': 'StackerEnsembleModel_LGB',
       'LightGBM_BAG_L2': 'StackerEnsembleModel_LGB',
+      'RandomForestMSE_BAG_L2': 'StackerEnsembleModel_RF',
+      'CatBoost_BAG_L2': 'StackerEnsembleModel_CatBoost',
+      'ExtraTreesMSE_BAG_L2': 'StackerEnsembleModel_XT',
+      'NeuralNetFastAI_BAG_L2': 'StackerEnsembleModel_NNFastAiTabular',
       'WeightedEnsemble_L3': 'WeightedEnsembleModel'},
      'model_performance': {'KNeighborsUnif_BAG_L1': -117.06074757128302,
       'KNeighborsDist_BAG_L1': -114.00404505882429,
       'LightGBMXT_BAG_L1': -60.19709831103628,
-      'WeightedEnsemble_L2': -60.12510035164886,
-      'LightGBMXT_BAG_L2': -60.977719808009496,
-      'LightGBM_BAG_L2': -60.209038712399085,
-      'WeightedEnsemble_L3': -59.96398356047644},
+      'LightGBM_BAG_L1': -60.9530807694855,
+      'RandomForestMSE_BAG_L1': -66.24091761068544,
+      'CatBoost_BAG_L1': -61.60408933992878,
+      'ExtraTreesMSE_BAG_L1': -66.23848900827704,
+      'NeuralNetFastAI_BAG_L1': -97.76823668290878,
+      'WeightedEnsemble_L2': -58.896532026740566,
+      'LightGBMXT_BAG_L2': -59.93794634434353,
+      'LightGBM_BAG_L2': -59.619094879112666,
+      'RandomForestMSE_BAG_L2': -59.88154679181342,
+      'CatBoost_BAG_L2': -58.587185607079064,
+      'ExtraTreesMSE_BAG_L2': -59.236701197520205,
+      'NeuralNetFastAI_BAG_L2': -58.516958980520066,
+      'WeightedEnsemble_L3': -58.196981885181145},
      'model_best': 'WeightedEnsemble_L3',
-     'model_paths': {'KNeighborsUnif_BAG_L1': 'AutogluonModels/ag-20230601_143940/models/KNeighborsUnif_BAG_L1/',
-      'KNeighborsDist_BAG_L1': 'AutogluonModels/ag-20230601_143940/models/KNeighborsDist_BAG_L1/',
-      'LightGBMXT_BAG_L1': 'AutogluonModels/ag-20230601_143940/models/LightGBMXT_BAG_L1/',
-      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230601_143940/models/WeightedEnsemble_L2/',
-      'LightGBMXT_BAG_L2': 'AutogluonModels/ag-20230601_143940/models/LightGBMXT_BAG_L2/',
-      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230601_143940/models/LightGBM_BAG_L2/',
-      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230601_143940/models/WeightedEnsemble_L3/'},
-     'model_fit_times': {'KNeighborsUnif_BAG_L1': 0.022294282913208008,
-      'KNeighborsDist_BAG_L1': 0.02222156524658203,
-      'LightGBMXT_BAG_L1': 89.12763810157776,
-      'WeightedEnsemble_L2': 0.2171802520751953,
-      'LightGBMXT_BAG_L2': 16.378373622894287,
-      'LightGBM_BAG_L2': 14.97650957107544,
-      'WeightedEnsemble_L3': 0.16341924667358398},
-     'model_pred_times': {'KNeighborsUnif_BAG_L1': 0.0935513973236084,
-      'KNeighborsDist_BAG_L1': 0.1025993824005127,
-      'LightGBMXT_BAG_L1': 24.770081520080566,
-      'WeightedEnsemble_L2': 0.0008327960968017578,
-      'LightGBMXT_BAG_L2': 0.21772050857543945,
-      'LightGBM_BAG_L2': 0.11430692672729492,
-      'WeightedEnsemble_L3': 0.0007610321044921875},
+     'model_paths': {'KNeighborsUnif_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/KNeighborsUnif_BAG_L1/',
+      'KNeighborsDist_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/KNeighborsDist_BAG_L1/',
+      'LightGBMXT_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/LightGBMXT_BAG_L1/',
+      'LightGBM_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/LightGBM_BAG_L1/',
+      'RandomForestMSE_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/RandomForestMSE_BAG_L1/',
+      'CatBoost_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/CatBoost_BAG_L1/',
+      'ExtraTreesMSE_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/ExtraTreesMSE_BAG_L1/',
+      'NeuralNetFastAI_BAG_L1': 'AutogluonModels/ag-20230602_143128/models/NeuralNetFastAI_BAG_L1/',
+      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230602_143128/models/WeightedEnsemble_L2/',
+      'LightGBMXT_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/LightGBMXT_BAG_L2/',
+      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/LightGBM_BAG_L2/',
+      'RandomForestMSE_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/RandomForestMSE_BAG_L2/',
+      'CatBoost_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/CatBoost_BAG_L2/',
+      'ExtraTreesMSE_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/ExtraTreesMSE_BAG_L2/',
+      'NeuralNetFastAI_BAG_L2': 'AutogluonModels/ag-20230602_143128/models/NeuralNetFastAI_BAG_L2/',
+      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230602_143128/models/WeightedEnsemble_L3/'},
+     'model_fit_times': {'KNeighborsUnif_BAG_L1': 0.02532029151916504,
+      'KNeighborsDist_BAG_L1': 0.02097296714782715,
+      'LightGBMXT_BAG_L1': 85.68154740333557,
+      'LightGBM_BAG_L1': 31.746620655059814,
+      'RandomForestMSE_BAG_L1': 7.652964115142822,
+      'CatBoost_BAG_L1': 220.21280097961426,
+      'ExtraTreesMSE_BAG_L1': 4.5348756313323975,
+      'NeuralNetFastAI_BAG_L1': 47.22026610374451,
+      'WeightedEnsemble_L2': 0.4403681755065918,
+      'LightGBMXT_BAG_L2': 16.947436571121216,
+      'LightGBM_BAG_L2': 16.54572319984436,
+      'RandomForestMSE_BAG_L2': 25.304656982421875,
+      'CatBoost_BAG_L2': 49.83392071723938,
+      'ExtraTreesMSE_BAG_L2': 7.125658750534058,
+      'NeuralNetFastAI_BAG_L2': 60.63371562957764,
+      'WeightedEnsemble_L3': 0.41855859756469727},
+     'model_pred_times': {'KNeighborsUnif_BAG_L1': 0.09578919410705566,
+      'KNeighborsDist_BAG_L1': 0.09381365776062012,
+      'LightGBMXT_BAG_L1': 17.943469524383545,
+      'LightGBM_BAG_L1': 3.2002928256988525,
+      'RandomForestMSE_BAG_L1': 0.5641791820526123,
+      'CatBoost_BAG_L1': 0.21066045761108398,
+      'ExtraTreesMSE_BAG_L1': 0.5526599884033203,
+      'NeuralNetFastAI_BAG_L1': 0.3845641613006592,
+      'WeightedEnsemble_L2': 0.0007326602935791016,
+      'LightGBMXT_BAG_L2': 0.3235204219818115,
+      'LightGBM_BAG_L2': 0.10857653617858887,
+      'RandomForestMSE_BAG_L2': 0.6083023548126221,
+      'CatBoost_BAG_L2': 0.08182764053344727,
+      'ExtraTreesMSE_BAG_L2': 0.5961017608642578,
+      'NeuralNetFastAI_BAG_L2': 0.506767749786377,
+      'WeightedEnsemble_L3': 0.0007119178771972656},
      'num_bag_folds': 8,
      'max_stack_level': 3,
      'model_hyperparams': {'KNeighborsUnif_BAG_L1': {'use_orig_features': True,
@@ -2062,6 +1796,28 @@ predictor_new_features.fit_summary()
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True},
+      'LightGBM_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'RandomForestMSE_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'CatBoost_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'ExtraTreesMSE_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'NeuralNetFastAI_BAG_L1': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
       'WeightedEnsemble_L2': {'use_orig_features': False,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
@@ -2074,36 +1830,81 @@ predictor_new_features.fit_summary()
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True},
+      'RandomForestMSE_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'CatBoost_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'ExtraTreesMSE_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True,
+       'use_child_oof': True},
+      'NeuralNetFastAI_BAG_L2': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
       'WeightedEnsemble_L3': {'use_orig_features': False,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
        'save_bag_folds': True}},
-     'leaderboard':                    model   score_val  pred_time_val    fit_time  \
-     0    WeightedEnsemble_L3  -59.963984      25.299021  120.690456   
-     1    WeightedEnsemble_L2  -60.125100      24.873514   89.367040   
-     2      LightGBMXT_BAG_L1  -60.197098      24.770082   89.127638   
-     3        LightGBM_BAG_L2  -60.209039      25.080539  104.148664   
-     4      LightGBMXT_BAG_L2  -60.977720      25.183953  105.550528   
-     5  KNeighborsDist_BAG_L1 -114.004045       0.102599    0.022222   
-     6  KNeighborsUnif_BAG_L1 -117.060748       0.093551    0.022294   
+     'leaderboard':                      model   score_val  pred_time_val    fit_time  \
+     0      WeightedEnsemble_L3  -58.196982      24.230838  515.107222   
+     1   NeuralNetFastAI_BAG_L2  -58.516959      23.552197  457.729084   
+     2          CatBoost_BAG_L2  -58.587186      23.127257  446.929289   
+     3      WeightedEnsemble_L2  -58.896532      21.919335  345.734301   
+     4     ExtraTreesMSE_BAG_L2  -59.236701      23.641531  404.221027   
+     5          LightGBM_BAG_L2  -59.619095      23.154006  413.641091   
+     6   RandomForestMSE_BAG_L2  -59.881547      23.653731  422.400025   
+     7        LightGBMXT_BAG_L2  -59.937946      23.368949  414.042805   
+     8        LightGBMXT_BAG_L1  -60.197098      17.943470   85.681547   
+     9          LightGBM_BAG_L1  -60.953081       3.200293   31.746621   
+     10         CatBoost_BAG_L1  -61.604089       0.210660  220.212801   
+     11    ExtraTreesMSE_BAG_L1  -66.238489       0.552660    4.534876   
+     12  RandomForestMSE_BAG_L1  -66.240918       0.564179    7.652964   
+     13  NeuralNetFastAI_BAG_L1  -97.768237       0.384564   47.220266   
+     14   KNeighborsDist_BAG_L1 -114.004045       0.093814    0.020973   
+     15   KNeighborsUnif_BAG_L1 -117.060748       0.095789    0.025320   
      
-        pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
-     0                0.000761           0.163419            3       True   
-     1                0.000833           0.217180            2       True   
-     2               24.770082          89.127638            1       True   
-     3                0.114307          14.976510            2       True   
-     4                0.217721          16.378374            2       True   
-     5                0.102599           0.022222            1       True   
-     6                0.093551           0.022294            1       True   
+         pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
+     0                 0.000712           0.418559            3       True   
+     1                 0.506768          60.633716            2       True   
+     2                 0.081828          49.833921            2       True   
+     3                 0.000733           0.440368            2       True   
+     4                 0.596102           7.125659            2       True   
+     5                 0.108577          16.545723            2       True   
+     6                 0.608302          25.304657            2       True   
+     7                 0.323520          16.947437            2       True   
+     8                17.943470          85.681547            1       True   
+     9                 3.200293          31.746621            1       True   
+     10                0.210660         220.212801            1       True   
+     11                0.552660           4.534876            1       True   
+     12                0.564179           7.652964            1       True   
+     13                0.384564          47.220266            1       True   
+     14                0.093814           0.020973            1       True   
+     15                0.095789           0.025320            1       True   
      
-        fit_order  
-     0          7  
-     1          4  
-     2          3  
-     3          6  
-     4          5  
-     5          2  
-     6          1  }
+         fit_order  
+     0          16  
+     1          15  
+     2          13  
+     3           9  
+     4          14  
+     5          11  
+     6          12  
+     7          10  
+     8           3  
+     9           4  
+     10          6  
+     11          7  
+     12          5  
+     13          8  
+     14          2  
+     15          1  }
 
 
 
@@ -2114,21 +1915,35 @@ leaderboard_new_df.plot(kind="bar", x="model", y="score_val", figsize=(14, 7))
 plt.show()
 ```
 
-                       model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0    WeightedEnsemble_L3  -59.963984      25.299021  120.690456                0.000761           0.163419            3       True          7
-    1    WeightedEnsemble_L2  -60.125100      24.873514   89.367040                0.000833           0.217180            2       True          4
-    2      LightGBMXT_BAG_L1  -60.197098      24.770082   89.127638               24.770082          89.127638            1       True          3
-    3        LightGBM_BAG_L2  -60.209039      25.080539  104.148664                0.114307          14.976510            2       True          6
-    4      LightGBMXT_BAG_L2  -60.977720      25.183953  105.550528                0.217721          16.378374            2       True          5
-    5  KNeighborsDist_BAG_L1 -114.004045       0.102599    0.022222                0.102599           0.022222            1       True          2
-    6  KNeighborsUnif_BAG_L1 -117.060748       0.093551    0.022294                0.093551           0.022294            1       True          1
+                         model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0      WeightedEnsemble_L3  -58.196982      24.230838  515.107222                0.000712           0.418559            3       True         16
+    1   NeuralNetFastAI_BAG_L2  -58.516959      23.552197  457.729084                0.506768          60.633716            2       True         15
+    2          CatBoost_BAG_L2  -58.587186      23.127257  446.929289                0.081828          49.833921            2       True         13
+    3      WeightedEnsemble_L2  -58.896532      21.919335  345.734301                0.000733           0.440368            2       True          9
+    4     ExtraTreesMSE_BAG_L2  -59.236701      23.641531  404.221027                0.596102           7.125659            2       True         14
+    5          LightGBM_BAG_L2  -59.619095      23.154006  413.641091                0.108577          16.545723            2       True         11
+    6   RandomForestMSE_BAG_L2  -59.881547      23.653731  422.400025                0.608302          25.304657            2       True         12
+    7        LightGBMXT_BAG_L2  -59.937946      23.368949  414.042805                0.323520          16.947437            2       True         10
+    8        LightGBMXT_BAG_L1  -60.197098      17.943470   85.681547               17.943470          85.681547            1       True          3
+    9          LightGBM_BAG_L1  -60.953081       3.200293   31.746621                3.200293          31.746621            1       True          4
+    10         CatBoost_BAG_L1  -61.604089       0.210660  220.212801                0.210660         220.212801            1       True          6
+    11    ExtraTreesMSE_BAG_L1  -66.238489       0.552660    4.534876                0.552660           4.534876            1       True          7
+    12  RandomForestMSE_BAG_L1  -66.240918       0.564179    7.652964                0.564179           7.652964            1       True          5
+    13  NeuralNetFastAI_BAG_L1  -97.768237       0.384564   47.220266                0.384564          47.220266            1       True          8
+    14   KNeighborsDist_BAG_L1 -114.004045       0.093814    0.020973                0.093814           0.020973            1       True          2
+    15   KNeighborsUnif_BAG_L1 -117.060748       0.095789    0.025320                0.095789           0.025320            1       True          1
 
 
 
     
-![png](output_50_1.png)
+![png](output_53_1.png)
     
 
+
+Insight
+- Again top result giver is L_3, other are L_2 level and base models (L_1) does not seem to perform good here.
+- With two extra and more sensible feature we get better results
+- one point to note here is that now with 2 new feature, L_1 show more relative improvement as compare to L_2 and L_3
 
 
 ```python
@@ -2139,11 +1954,11 @@ predictions_new_features.head()
 
 
 
-    0    25.509943
-    1    11.078977
-    2     9.098299
-    3     8.904437
-    4     8.784183
+    0    19.169415
+    1     4.918484
+    2     2.845312
+    3     3.435486
+    4     2.997172
     Name: count, dtype: float32
 
 
@@ -2228,7 +2043,7 @@ submission_new_features.to_csv("submission_new_features.csv", index=False)
 !kaggle competitions submit -c bike-sharing-demand -f submission_new_features.csv -m "Two new features (hours & Weekday)"
 ```
 
-    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 324kB/s]
+    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 339kB/s]
     Successfully submitted to Bike Sharing Demand
 
 
@@ -2238,14 +2053,14 @@ submission_new_features.to_csv("submission_new_features.csv", index=False)
 
     fileName                     date                 description                                                                                         status    publicScore  privateScore  
     ---------------------------  -------------------  --------------------------------------------------------------------------------------------------  --------  -----------  ------------  
-    submission_new_features.csv  2023-06-01 14:43:01  Two new features (hours & Weekday)                                                                  complete  0.58036      0.58036       
-    submission.csv               2023-06-01 14:39:34  Initial Submission                                                                                  complete  2.06263      2.06263       
-    submission_new_hyp_3.csv     2023-06-01 07:29:37  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  complete  0.50079      0.50079       
-    submission_new_hyp_2.csv     2023-06-01 07:29:35  new features with hyperparameters epoch, boost round, learning rate, extra trees                    complete  0.65221      0.65221       
+    submission_new_features.csv  2023-06-02 14:44:22  Two new features (hours & Weekday)                                                                  complete  0.50823      0.50823       
+    submission.csv               2023-06-02 14:26:04  Initial Submission                                                                                  complete  1.80958      1.80958       
+    submission_new_hyp_3.csv     2023-06-01 14:50:49  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  complete  0.49945      0.49945       
+    submission_new_hyp_2.csv     2023-06-01 14:50:46  new features with hyperparameters epoch, boost round, learning rate, extra trees                    complete  0.65221      0.65221       
     tail: write error: Broken pipe
 
 
-#### New Score of 0.58036      
+#### New Score of 0.50823   
 
 ## Step 6: Hyper parameter optimization
 * There are many options for hyper parameter optimization.
@@ -2269,11 +2084,11 @@ hyperparameters_1 = {
 hyperparameters_2 = {
     "NN_TORCH": {
         "num_epochs": 100,
-        "learning_rate": 1e-5,
+        "learning_rate": 1e-4,
     },
     "GBM": {
         "num_boost_round": 1000,
-        "extra_trees": True,
+        "extra_trees": False,
     },
 }
 
@@ -2282,8 +2097,8 @@ hyperparameters_2 = {
 
 ```python
 hyperparameters_3 = {  
-    "GBM": {"extra_trees": True, "num_boost_round": 1000, "num_leaves": 5},
-    "NN_TORCH": {"num_epochs": 100, "learning_rate": 1e-5, "dropout_prob": 0.05},
+    "GBM": {"extra_trees": False, "num_boost_round": 1000, "num_leaves": 5},
+    "NN_TORCH": {"num_epochs": 100, "learning_rate": 1e-5, "dropout_prob": 0.001},
 }
 ```
 
@@ -2298,21 +2113,18 @@ predictor_new_hp_1 = TabularPredictor(
 
 predictor_new_hp_1.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_1,
-    refit_full="best",
+    refit_full="best", # the predictor should be refit using the best configuration found during the initial fitting
 )
-
-predictor_new_hp_1.fit_summary()
-
 ```
 
-    No path specified. Models will be saved in: "AutogluonModels/ag-20230601_144303/"
+    No path specified. Models will be saved in: "AutogluonModels/ag-20230602_145116/"
     Presets specified: ['best_quality']
     Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
-    Beginning AutoGluon training ... Time limit = 120s
-    AutoGluon will save models to "AutogluonModels/ag-20230601_144303/"
+    Beginning AutoGluon training ... Time limit = 600s
+    AutoGluon will save models to "AutogluonModels/ag-20230602_145116/"
     AutoGluon Version:  0.7.0
     Python Version:     3.8.10
     Operating System:   Linux
@@ -2325,7 +2137,7 @@ predictor_new_hp_1.fit_summary()
     Using Feature Generators to preprocess the data ...
     Dropping user-specified ignored columns: ['casual', 'registered']
     Fitting AutoMLPipelineFeatureGenerator...
-    	Available Memory:                    2552.53 MB
+    	Available Memory:                    2103.44 MB
     	Train Data (Original)  Memory Usage: 0.72 MB (0.0% of available memory)
     	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
     	Stage 1 Generators:
@@ -2351,44 +2163,44 @@ predictor_new_hp_1.fit_summary()
     	0.1s = Fit runtime
     	10 features in original data used to generate 10 features in processed data.
     	Train Data (Processed) Memory Usage: 0.57 MB (0.0% of available memory)
-    Data preprocessing and feature engineering runtime = 0.12s ...
+    Data preprocessing and feature engineering runtime = 0.13s ...
     AutoGluon will gauge predictive performance using evaluation metric: 'root_mean_squared_error'
     	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
     	To change this, specify the eval_metric parameter of Predictor()
     AutoGluon will fit 2 stack levels (L1 to L2) ...
     Fitting 2 L1 models ...
-    Fitting model: LightGBM_BAG_L1 ... Training model for up to 79.9s of the 119.88s of remaining time.
+    Fitting model: LightGBM_BAG_L1 ... Training model for up to 399.81s of the 599.86s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
     	-61.5645	 = Validation score   (-root_mean_squared_error)
-    	20.44s	 = Training   runtime
-    	1.53s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 55.73s of the 95.71s of remaining time.
+    	20.37s	 = Training   runtime
+    	1.5s	 = Validation runtime
+    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 375.7s of the 575.75s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-86.1104	 = Validation score   (-root_mean_squared_error)
-    	60.66s	 = Training   runtime
-    	0.18s	 = Validation runtime
+    	-66.6186	 = Validation score   (-root_mean_squared_error)
+    	286.42s	 = Training   runtime
+    	0.16s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.88s of the 31.48s of remaining time.
-    	-61.5134	 = Validation score   (-root_mean_squared_error)
-    	0.17s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 285.84s of remaining time.
+    	-60.3867	 = Validation score   (-root_mean_squared_error)
+    	0.16s	 = Training   runtime
     	0.0s	 = Validation runtime
     Fitting 2 L2 models ...
-    Fitting model: LightGBM_BAG_L2 ... Training model for up to 31.25s of the 31.24s of remaining time.
+    Fitting model: LightGBM_BAG_L2 ... Training model for up to 285.62s of the 285.61s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-63.3117	 = Validation score   (-root_mean_squared_error)
-    	14.68s	 = Training   runtime
+    	-62.1227	 = Validation score   (-root_mean_squared_error)
+    	14.16s	 = Training   runtime
     	0.09s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 12.8s of the 12.8s of remaining time.
+    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 268.1s of the 268.1s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-65.4893	 = Validation score   (-root_mean_squared_error)
-    	27.25s	 = Training   runtime
-    	0.39s	 = Validation runtime
+    	-62.1487	 = Validation score   (-root_mean_squared_error)
+    	134.62s	 = Training   runtime
+    	0.23s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L3 ... Training model for up to 119.88s of the -17.93s of remaining time.
-    	-62.9094	 = Validation score   (-root_mean_squared_error)
-    	0.17s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the 130.16s of remaining time.
+    	-61.3916	 = Validation score   (-root_mean_squared_error)
+    	0.16s	 = Training   runtime
     	0.0s	 = Validation runtime
-    AutoGluon training complete, total runtime = 138.28s ... Best model: "WeightedEnsemble_L2"
+    AutoGluon training complete, total runtime = 470.19s ... Best model: "WeightedEnsemble_L2"
     Automatically performing refit_full as a post-fit operation (due to `.fit(..., refit_full=True)`
     Refitting models via `predictor.refit_full` using all of the data (combined train and validation)...
     	Models trained in this way will have the suffix "_FULL" and have NaN validation score.
@@ -2396,28 +2208,40 @@ predictor_new_hp_1.fit_summary()
     	To learn more, refer to the `.refit_full` method docstring which explains how "_FULL" models differ from normal models.
     Fitting 1 L1 models ...
     Fitting model: LightGBM_BAG_L1_FULL ...
-    	1.59s	 = Training   runtime
+    	1.29s	 = Training   runtime
     Fitting 1 L1 models ...
     Fitting model: NeuralNetTorch_BAG_L1_FULL ...
-    	6.85s	 = Training   runtime
+    	39.01s	 = Training   runtime
     Fitting model: WeightedEnsemble_L2_FULL | Skipping fit via cloning parent ...
-    	0.17s	 = Training   runtime
-    Refit complete, total runtime = 10.5s
-    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230601_144303/")
+    	0.16s	 = Training   runtime
+    Refit complete, total runtime = 42.28s
+    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230602_145116/")
 
+
+
+
+
+    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fbaa7075f40>
+
+
+
+
+```python
+predictor_new_hp_1.fit_summary()
+```
 
     *** Summary of fit() ***
     Estimated performance of each model:
                             model  score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0         WeightedEnsemble_L2 -61.513434       1.707213   81.267027                0.000782           0.166178            2       True          3
-    1             LightGBM_BAG_L1 -61.564474       1.525321   20.440489                1.525321          20.440489            1       True          1
-    2         WeightedEnsemble_L3 -62.909433       2.188551  123.195870                0.000821           0.168333            3       True          6
-    3             LightGBM_BAG_L2 -63.311743       1.793295   95.779210                0.086864          14.678361            2       True          4
-    4       NeuralNetTorch_BAG_L2 -65.489339       2.100866  108.349176                0.394434          27.248328            2       True          5
-    5       NeuralNetTorch_BAG_L1 -86.110372       0.181111   60.660360                0.181111          60.660360            1       True          2
-    6    WeightedEnsemble_L2_FULL        NaN            NaN    8.604759                     NaN           0.166178            2       True          9
-    7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN    6.851289                     NaN           6.851289            1       True          8
-    8        LightGBM_BAG_L1_FULL        NaN            NaN    1.587292                     NaN           1.587292            1       True          7
+    0         WeightedEnsemble_L2 -60.386725       1.658752  306.940421                0.000860           0.155286            2       True          3
+    1         WeightedEnsemble_L3 -61.391586       1.979550  455.726671                0.000714           0.161280            3       True          6
+    2             LightGBM_BAG_L1 -61.564474       1.498764   20.368878                1.498764          20.368878            1       True          1
+    3             LightGBM_BAG_L2 -62.122728       1.749792  320.944915                0.091900          14.159780            2       True          4
+    4       NeuralNetTorch_BAG_L2 -62.148654       1.886936  441.405611                0.229044         134.620476            2       True          5
+    5       NeuralNetTorch_BAG_L1 -66.618550       0.159128  286.416256                0.159128         286.416256            1       True          2
+    6    WeightedEnsemble_L2_FULL        NaN            NaN   40.452355                     NaN           0.155286            2       True          9
+    7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN   39.006562                     NaN          39.006562            1       True          8
+    8        LightGBM_BAG_L1_FULL        NaN            NaN    1.290507                     NaN           1.290507            1       True          7
     Number of models trained: 9
     Types of models trained:
     {'StackerEnsembleModel_TabularNeuralNetTorch', 'StackerEnsembleModel_LGB', 'WeightedEnsembleModel'}
@@ -2429,7 +2253,7 @@ predictor_new_hp_1.fit_summary()
     ('float', [])     : 3 | ['temp', 'atemp', 'windspeed']
     ('int', [])       : 3 | ['humidity', 'hour', 'day']
     ('int', ['bool']) : 2 | ['holiday', 'workingday']
-    Plot summary of models saved to file: AutogluonModels/ag-20230601_144303/SummaryOfModels.html
+    Plot summary of models saved to file: AutogluonModels/ag-20230602_145116/SummaryOfModels.html
     *** End of fit() summary ***
 
 
@@ -2446,39 +2270,39 @@ predictor_new_hp_1.fit_summary()
       'NeuralNetTorch_BAG_L1_FULL': 'StackerEnsembleModel_TabularNeuralNetTorch',
       'WeightedEnsemble_L2_FULL': 'WeightedEnsembleModel'},
      'model_performance': {'LightGBM_BAG_L1': -61.5644737203475,
-      'NeuralNetTorch_BAG_L1': -86.11037239063127,
-      'WeightedEnsemble_L2': -61.51343352900248,
-      'LightGBM_BAG_L2': -63.311743480440065,
-      'NeuralNetTorch_BAG_L2': -65.4893394423414,
-      'WeightedEnsemble_L3': -62.90943306224446,
+      'NeuralNetTorch_BAG_L1': -66.61855036413591,
+      'WeightedEnsemble_L2': -60.38672495183434,
+      'LightGBM_BAG_L2': -62.12272806653446,
+      'NeuralNetTorch_BAG_L2': -62.14865407732584,
+      'WeightedEnsemble_L3': -61.39158630922291,
       'LightGBM_BAG_L1_FULL': None,
       'NeuralNetTorch_BAG_L1_FULL': None,
       'WeightedEnsemble_L2_FULL': None},
      'model_best': 'WeightedEnsemble_L2',
-     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230601_144303/models/LightGBM_BAG_L1/',
-      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230601_144303/models/NeuralNetTorch_BAG_L1/',
-      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230601_144303/models/WeightedEnsemble_L2/',
-      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230601_144303/models/LightGBM_BAG_L2/',
-      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230601_144303/models/NeuralNetTorch_BAG_L2/',
-      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230601_144303/models/WeightedEnsemble_L3/',
-      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230601_144303/models/LightGBM_BAG_L1_FULL/',
-      'NeuralNetTorch_BAG_L1_FULL': 'AutogluonModels/ag-20230601_144303/models/NeuralNetTorch_BAG_L1_FULL/',
-      'WeightedEnsemble_L2_FULL': 'AutogluonModels/ag-20230601_144303/models/WeightedEnsemble_L2_FULL/'},
-     'model_fit_times': {'LightGBM_BAG_L1': 20.440488576889038,
-      'NeuralNetTorch_BAG_L1': 60.66035985946655,
-      'WeightedEnsemble_L2': 0.16617822647094727,
-      'LightGBM_BAG_L2': 14.678361177444458,
-      'NeuralNetTorch_BAG_L2': 27.24832773208618,
-      'WeightedEnsemble_L3': 0.1683330535888672,
-      'LightGBM_BAG_L1_FULL': 1.587292194366455,
-      'NeuralNetTorch_BAG_L1_FULL': 6.8512890338897705,
-      'WeightedEnsemble_L2_FULL': 0.16617822647094727},
-     'model_pred_times': {'LightGBM_BAG_L1': 1.5253205299377441,
-      'NeuralNetTorch_BAG_L1': 0.18111109733581543,
-      'WeightedEnsemble_L2': 0.0007817745208740234,
-      'LightGBM_BAG_L2': 0.08686351776123047,
-      'NeuralNetTorch_BAG_L2': 0.39443445205688477,
-      'WeightedEnsemble_L3': 0.0008211135864257812,
+     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230602_145116/models/LightGBM_BAG_L1/',
+      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230602_145116/models/NeuralNetTorch_BAG_L1/',
+      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230602_145116/models/WeightedEnsemble_L2/',
+      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230602_145116/models/LightGBM_BAG_L2/',
+      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230602_145116/models/NeuralNetTorch_BAG_L2/',
+      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230602_145116/models/WeightedEnsemble_L3/',
+      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230602_145116/models/LightGBM_BAG_L1_FULL/',
+      'NeuralNetTorch_BAG_L1_FULL': 'AutogluonModels/ag-20230602_145116/models/NeuralNetTorch_BAG_L1_FULL/',
+      'WeightedEnsemble_L2_FULL': 'AutogluonModels/ag-20230602_145116/models/WeightedEnsemble_L2_FULL/'},
+     'model_fit_times': {'LightGBM_BAG_L1': 20.36887836456299,
+      'NeuralNetTorch_BAG_L1': 286.4162564277649,
+      'WeightedEnsemble_L2': 0.15528631210327148,
+      'LightGBM_BAG_L2': 14.159779787063599,
+      'NeuralNetTorch_BAG_L2': 134.62047600746155,
+      'WeightedEnsemble_L3': 0.16128039360046387,
+      'LightGBM_BAG_L1_FULL': 1.2905066013336182,
+      'NeuralNetTorch_BAG_L1_FULL': 39.00656223297119,
+      'WeightedEnsemble_L2_FULL': 0.15528631210327148},
+     'model_pred_times': {'LightGBM_BAG_L1': 1.4987642765045166,
+      'NeuralNetTorch_BAG_L1': 0.15912771224975586,
+      'WeightedEnsemble_L2': 0.0008599758148193359,
+      'LightGBM_BAG_L2': 0.09189987182617188,
+      'NeuralNetTorch_BAG_L2': 0.22904396057128906,
+      'WeightedEnsemble_L3': 0.0007143020629882812,
       'LightGBM_BAG_L1_FULL': None,
       'NeuralNetTorch_BAG_L1_FULL': None,
       'WeightedEnsemble_L2_FULL': None},
@@ -2521,31 +2345,31 @@ predictor_new_hp_1.fit_summary()
        'max_base_models_per_type': 5,
        'save_bag_folds': True}},
      'leaderboard':                         model  score_val  pred_time_val    fit_time  \
-     0         WeightedEnsemble_L2 -61.513434       1.707213   81.267027   
-     1             LightGBM_BAG_L1 -61.564474       1.525321   20.440489   
-     2         WeightedEnsemble_L3 -62.909433       2.188551  123.195870   
-     3             LightGBM_BAG_L2 -63.311743       1.793295   95.779210   
-     4       NeuralNetTorch_BAG_L2 -65.489339       2.100866  108.349176   
-     5       NeuralNetTorch_BAG_L1 -86.110372       0.181111   60.660360   
-     6    WeightedEnsemble_L2_FULL        NaN            NaN    8.604759   
-     7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN    6.851289   
-     8        LightGBM_BAG_L1_FULL        NaN            NaN    1.587292   
+     0         WeightedEnsemble_L2 -60.386725       1.658752  306.940421   
+     1         WeightedEnsemble_L3 -61.391586       1.979550  455.726671   
+     2             LightGBM_BAG_L1 -61.564474       1.498764   20.368878   
+     3             LightGBM_BAG_L2 -62.122728       1.749792  320.944915   
+     4       NeuralNetTorch_BAG_L2 -62.148654       1.886936  441.405611   
+     5       NeuralNetTorch_BAG_L1 -66.618550       0.159128  286.416256   
+     6    WeightedEnsemble_L2_FULL        NaN            NaN   40.452355   
+     7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN   39.006562   
+     8        LightGBM_BAG_L1_FULL        NaN            NaN    1.290507   
      
         pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
-     0                0.000782           0.166178            2       True   
-     1                1.525321          20.440489            1       True   
-     2                0.000821           0.168333            3       True   
-     3                0.086864          14.678361            2       True   
-     4                0.394434          27.248328            2       True   
-     5                0.181111          60.660360            1       True   
-     6                     NaN           0.166178            2       True   
-     7                     NaN           6.851289            1       True   
-     8                     NaN           1.587292            1       True   
+     0                0.000860           0.155286            2       True   
+     1                0.000714           0.161280            3       True   
+     2                1.498764          20.368878            1       True   
+     3                0.091900          14.159780            2       True   
+     4                0.229044         134.620476            2       True   
+     5                0.159128         286.416256            1       True   
+     6                     NaN           0.155286            2       True   
+     7                     NaN          39.006562            1       True   
+     8                     NaN           1.290507            1       True   
      
         fit_order  
      0          3  
-     1          1  
-     2          6  
+     1          6  
+     2          1  
      3          4  
      4          5  
      5          2  
@@ -2566,21 +2390,19 @@ predictor_new_hp_2 = TabularPredictor(
 
 predictor_new_hp_2.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_2,
     refit_full="best",
 )
 
-predictor_new_hp_2.fit_summary()
-
 ```
 
-    No path specified. Models will be saved in: "AutogluonModels/ag-20230601_144532/"
+    No path specified. Models will be saved in: "AutogluonModels/ag-20230602_145949/"
     Presets specified: ['best_quality']
     Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
-    Beginning AutoGluon training ... Time limit = 120s
-    AutoGluon will save models to "AutogluonModels/ag-20230601_144532/"
+    Beginning AutoGluon training ... Time limit = 600s
+    AutoGluon will save models to "AutogluonModels/ag-20230602_145949/"
     AutoGluon Version:  0.7.0
     Python Version:     3.8.10
     Operating System:   Linux
@@ -2593,7 +2415,7 @@ predictor_new_hp_2.fit_summary()
     Using Feature Generators to preprocess the data ...
     Dropping user-specified ignored columns: ['casual', 'registered']
     Fitting AutoMLPipelineFeatureGenerator...
-    	Available Memory:                    2555.8 MB
+    	Available Memory:                    2102.57 MB
     	Train Data (Original)  Memory Usage: 0.72 MB (0.0% of available memory)
     	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
     	Stage 1 Generators:
@@ -2619,44 +2441,44 @@ predictor_new_hp_2.fit_summary()
     	0.1s = Fit runtime
     	10 features in original data used to generate 10 features in processed data.
     	Train Data (Processed) Memory Usage: 0.57 MB (0.0% of available memory)
-    Data preprocessing and feature engineering runtime = 0.1s ...
+    Data preprocessing and feature engineering runtime = 0.09s ...
     AutoGluon will gauge predictive performance using evaluation metric: 'root_mean_squared_error'
     	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
     	To change this, specify the eval_metric parameter of Predictor()
     AutoGluon will fit 2 stack levels (L1 to L2) ...
     Fitting 2 L1 models ...
-    Fitting model: LightGBM_BAG_L1 ... Training model for up to 79.92s of the 119.9s of remaining time.
+    Fitting model: LightGBM_BAG_L1 ... Training model for up to 399.84s of the 599.91s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-63.3456	 = Validation score   (-root_mean_squared_error)
-    	21.84s	 = Training   runtime
-    	2.1s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 54.35s of the 94.34s of remaining time.
+    	-61.5645	 = Validation score   (-root_mean_squared_error)
+    	20.6s	 = Training   runtime
+    	1.51s	 = Validation runtime
+    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 375.8s of the 575.87s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-148.0209	 = Validation score   (-root_mean_squared_error)
-    	60.14s	 = Training   runtime
-    	0.14s	 = Validation runtime
+    	-71.0435	 = Validation score   (-root_mean_squared_error)
+    	315.8s	 = Training   runtime
+    	0.17s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.9s of the 30.75s of remaining time.
-    	-63.3456	 = Validation score   (-root_mean_squared_error)
+    Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 256.57s of remaining time.
+    	-61.0972	 = Validation score   (-root_mean_squared_error)
     	0.16s	 = Training   runtime
     	0.0s	 = Validation runtime
     Fitting 2 L2 models ...
-    Fitting model: LightGBM_BAG_L2 ... Training model for up to 30.52s of the 30.51s of remaining time.
+    Fitting model: LightGBM_BAG_L2 ... Training model for up to 256.34s of the 256.33s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-64.04	 = Validation score   (-root_mean_squared_error)
-    	18.14s	 = Training   runtime
-    	0.8s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 7.9s of the 7.9s of remaining time.
+    	-62.696	 = Validation score   (-root_mean_squared_error)
+    	14.55s	 = Training   runtime
+    	0.1s	 = Validation runtime
+    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 238.39s of the 238.38s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-320.0707	 = Validation score   (-root_mean_squared_error)
-    	23.65s	 = Training   runtime
-    	0.14s	 = Validation runtime
+    	-62.6379	 = Validation score   (-root_mean_squared_error)
+    	174.73s	 = Training   runtime
+    	0.21s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L3 ... Training model for up to 119.9s of the -19.08s of remaining time.
-    	-64.04	 = Validation score   (-root_mean_squared_error)
-    	0.17s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the 60.26s of remaining time.
+    	-61.9719	 = Validation score   (-root_mean_squared_error)
+    	0.16s	 = Training   runtime
     	0.0s	 = Validation runtime
-    AutoGluon training complete, total runtime = 139.43s ... Best model: "WeightedEnsemble_L2"
+    AutoGluon training complete, total runtime = 540.07s ... Best model: "WeightedEnsemble_L2"
     Automatically performing refit_full as a post-fit operation (due to `.fit(..., refit_full=True)`
     Refitting models via `predictor.refit_full` using all of the data (combined train and validation)...
     	Models trained in this way will have the suffix "_FULL" and have NaN validation score.
@@ -2664,22 +2486,41 @@ predictor_new_hp_2.fit_summary()
     	To learn more, refer to the `.refit_full` method docstring which explains how "_FULL" models differ from normal models.
     Fitting 1 L1 models ...
     Fitting model: LightGBM_BAG_L1_FULL ...
-    	1.54s	 = Training   runtime
-    Refit complete, total runtime = 3.95s
-    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230601_144532/")
+    	1.28s	 = Training   runtime
+    Fitting 1 L1 models ...
+    Fitting model: NeuralNetTorch_BAG_L1_FULL ...
+    	44.36s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L2_FULL | Skipping fit via cloning parent ...
+    	0.16s	 = Training   runtime
+    Refit complete, total runtime = 47.63s
+    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230602_145949/")
 
+
+
+
+
+    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fbaa70f3910>
+
+
+
+
+```python
+predictor_new_hp_2.fit_summary()
+```
 
     *** Summary of fit() ***
     Estimated performance of each model:
-                       model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0        LightGBM_BAG_L1  -63.345619       2.101660   21.840686                2.101660          21.840686            1       True          1
-    1    WeightedEnsemble_L2  -63.345619       2.102354   22.002602                0.000694           0.161916            2       True          3
-    2        LightGBM_BAG_L2  -64.039953       3.039567  100.124812                0.795607          18.140151            2       True          4
-    3    WeightedEnsemble_L3  -64.039953       3.040397  100.289885                0.000830           0.165072            3       True          6
-    4  NeuralNetTorch_BAG_L1 -148.020895       0.142299   60.143975                0.142299          60.143975            1       True          2
-    5  NeuralNetTorch_BAG_L2 -320.070707       2.388217  105.632385                0.144257          23.647723            2       True          5
-    6   LightGBM_BAG_L1_FULL         NaN            NaN    1.541076                     NaN           1.541076            1       True          7
-    Number of models trained: 7
+                            model  score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0         WeightedEnsemble_L2 -61.097221       1.683237  336.557773                0.000752           0.162342            2       True          3
+    1             LightGBM_BAG_L1 -61.564474       1.509014   20.598038                1.509014          20.598038            1       True          1
+    2         WeightedEnsemble_L3 -61.971928       1.998416  525.834985                0.000718           0.161558            3       True          6
+    3       NeuralNetTorch_BAG_L2 -62.637921       1.896030  511.121953                0.213546         174.726521            2       True          5
+    4             LightGBM_BAG_L2 -62.696003       1.784152  350.946906                0.101668          14.551474            2       True          4
+    5       NeuralNetTorch_BAG_L1 -71.043477       0.173471  315.797393                0.173471         315.797393            1       True          2
+    6    WeightedEnsemble_L2_FULL        NaN            NaN   45.805062                     NaN           0.162342            2       True          9
+    7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN   44.364559                     NaN          44.364559            1       True          8
+    8        LightGBM_BAG_L1_FULL        NaN            NaN    1.278162                     NaN           1.278162            1       True          7
+    Number of models trained: 9
     Types of models trained:
     {'StackerEnsembleModel_TabularNeuralNetTorch', 'StackerEnsembleModel_LGB', 'WeightedEnsembleModel'}
     Bagging used: True  (with 8 folds)
@@ -2690,7 +2531,7 @@ predictor_new_hp_2.fit_summary()
     ('float', [])     : 3 | ['temp', 'atemp', 'windspeed']
     ('int', [])       : 3 | ['humidity', 'hour', 'day']
     ('int', ['bool']) : 2 | ['holiday', 'workingday']
-    Plot summary of models saved to file: AutogluonModels/ag-20230601_144532/SummaryOfModels.html
+    Plot summary of models saved to file: AutogluonModels/ag-20230602_145949/SummaryOfModels.html
     *** End of fit() summary ***
 
 
@@ -2703,36 +2544,46 @@ predictor_new_hp_2.fit_summary()
       'LightGBM_BAG_L2': 'StackerEnsembleModel_LGB',
       'NeuralNetTorch_BAG_L2': 'StackerEnsembleModel_TabularNeuralNetTorch',
       'WeightedEnsemble_L3': 'WeightedEnsembleModel',
-      'LightGBM_BAG_L1_FULL': 'StackerEnsembleModel_LGB'},
-     'model_performance': {'LightGBM_BAG_L1': -63.345618670334574,
-      'NeuralNetTorch_BAG_L1': -148.02089469234645,
-      'WeightedEnsemble_L2': -63.345618670334574,
-      'LightGBM_BAG_L2': -64.03995275810236,
-      'NeuralNetTorch_BAG_L2': -320.0707074589126,
-      'WeightedEnsemble_L3': -64.03995275810236,
-      'LightGBM_BAG_L1_FULL': None},
+      'LightGBM_BAG_L1_FULL': 'StackerEnsembleModel_LGB',
+      'NeuralNetTorch_BAG_L1_FULL': 'StackerEnsembleModel_TabularNeuralNetTorch',
+      'WeightedEnsemble_L2_FULL': 'WeightedEnsembleModel'},
+     'model_performance': {'LightGBM_BAG_L1': -61.5644737203475,
+      'NeuralNetTorch_BAG_L1': -71.04347666821607,
+      'WeightedEnsemble_L2': -61.09722067327154,
+      'LightGBM_BAG_L2': -62.696003176824426,
+      'NeuralNetTorch_BAG_L2': -62.63792135804677,
+      'WeightedEnsemble_L3': -61.97192759418178,
+      'LightGBM_BAG_L1_FULL': None,
+      'NeuralNetTorch_BAG_L1_FULL': None,
+      'WeightedEnsemble_L2_FULL': None},
      'model_best': 'WeightedEnsemble_L2',
-     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230601_144532/models/LightGBM_BAG_L1/',
-      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230601_144532/models/NeuralNetTorch_BAG_L1/',
-      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230601_144532/models/WeightedEnsemble_L2/',
-      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230601_144532/models/LightGBM_BAG_L2/',
-      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230601_144532/models/NeuralNetTorch_BAG_L2/',
-      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230601_144532/models/WeightedEnsemble_L3/',
-      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230601_144532/models/LightGBM_BAG_L1_FULL/'},
-     'model_fit_times': {'LightGBM_BAG_L1': 21.840686082839966,
-      'NeuralNetTorch_BAG_L1': 60.143975496292114,
-      'WeightedEnsemble_L2': 0.16191577911376953,
-      'LightGBM_BAG_L2': 18.140150785446167,
-      'NeuralNetTorch_BAG_L2': 23.64772319793701,
-      'WeightedEnsemble_L3': 0.16507220268249512,
-      'LightGBM_BAG_L1_FULL': 1.5410757064819336},
-     'model_pred_times': {'LightGBM_BAG_L1': 2.1016604900360107,
-      'NeuralNetTorch_BAG_L1': 0.14229941368103027,
-      'WeightedEnsemble_L2': 0.0006935596466064453,
-      'LightGBM_BAG_L2': 0.7956070899963379,
-      'NeuralNetTorch_BAG_L2': 0.1442568302154541,
-      'WeightedEnsemble_L3': 0.0008304119110107422,
-      'LightGBM_BAG_L1_FULL': None},
+     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230602_145949/models/LightGBM_BAG_L1/',
+      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230602_145949/models/NeuralNetTorch_BAG_L1/',
+      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230602_145949/models/WeightedEnsemble_L2/',
+      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230602_145949/models/LightGBM_BAG_L2/',
+      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230602_145949/models/NeuralNetTorch_BAG_L2/',
+      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230602_145949/models/WeightedEnsemble_L3/',
+      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230602_145949/models/LightGBM_BAG_L1_FULL/',
+      'NeuralNetTorch_BAG_L1_FULL': 'AutogluonModels/ag-20230602_145949/models/NeuralNetTorch_BAG_L1_FULL/',
+      'WeightedEnsemble_L2_FULL': 'AutogluonModels/ag-20230602_145949/models/WeightedEnsemble_L2_FULL/'},
+     'model_fit_times': {'LightGBM_BAG_L1': 20.5980384349823,
+      'NeuralNetTorch_BAG_L1': 315.7973930835724,
+      'WeightedEnsemble_L2': 0.16234183311462402,
+      'LightGBM_BAG_L2': 14.551474332809448,
+      'NeuralNetTorch_BAG_L2': 174.72652125358582,
+      'WeightedEnsemble_L3': 0.16155791282653809,
+      'LightGBM_BAG_L1_FULL': 1.2781615257263184,
+      'NeuralNetTorch_BAG_L1_FULL': 44.364558696746826,
+      'WeightedEnsemble_L2_FULL': 0.16234183311462402},
+     'model_pred_times': {'LightGBM_BAG_L1': 1.5090136528015137,
+      'NeuralNetTorch_BAG_L1': 0.17347073554992676,
+      'WeightedEnsemble_L2': 0.0007522106170654297,
+      'LightGBM_BAG_L2': 0.10166764259338379,
+      'NeuralNetTorch_BAG_L2': 0.2135460376739502,
+      'WeightedEnsemble_L3': 0.0007183551788330078,
+      'LightGBM_BAG_L1_FULL': None,
+      'NeuralNetTorch_BAG_L1_FULL': None,
+      'WeightedEnsemble_L2_FULL': None},
      'num_bag_folds': 8,
      'max_stack_level': 3,
      'model_hyperparams': {'LightGBM_BAG_L1': {'use_orig_features': True,
@@ -2762,33 +2613,47 @@ predictor_new_hp_2.fit_summary()
       'LightGBM_BAG_L1_FULL': {'use_orig_features': True,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'NeuralNetTorch_BAG_L1_FULL': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'WeightedEnsemble_L2_FULL': {'use_orig_features': False,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
        'save_bag_folds': True}},
-     'leaderboard':                    model   score_val  pred_time_val    fit_time  \
-     0        LightGBM_BAG_L1  -63.345619       2.101660   21.840686   
-     1    WeightedEnsemble_L2  -63.345619       2.102354   22.002602   
-     2        LightGBM_BAG_L2  -64.039953       3.039567  100.124812   
-     3    WeightedEnsemble_L3  -64.039953       3.040397  100.289885   
-     4  NeuralNetTorch_BAG_L1 -148.020895       0.142299   60.143975   
-     5  NeuralNetTorch_BAG_L2 -320.070707       2.388217  105.632385   
-     6   LightGBM_BAG_L1_FULL         NaN            NaN    1.541076   
+     'leaderboard':                         model  score_val  pred_time_val    fit_time  \
+     0         WeightedEnsemble_L2 -61.097221       1.683237  336.557773   
+     1             LightGBM_BAG_L1 -61.564474       1.509014   20.598038   
+     2         WeightedEnsemble_L3 -61.971928       1.998416  525.834985   
+     3       NeuralNetTorch_BAG_L2 -62.637921       1.896030  511.121953   
+     4             LightGBM_BAG_L2 -62.696003       1.784152  350.946906   
+     5       NeuralNetTorch_BAG_L1 -71.043477       0.173471  315.797393   
+     6    WeightedEnsemble_L2_FULL        NaN            NaN   45.805062   
+     7  NeuralNetTorch_BAG_L1_FULL        NaN            NaN   44.364559   
+     8        LightGBM_BAG_L1_FULL        NaN            NaN    1.278162   
      
         pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
-     0                2.101660          21.840686            1       True   
-     1                0.000694           0.161916            2       True   
-     2                0.795607          18.140151            2       True   
-     3                0.000830           0.165072            3       True   
-     4                0.142299          60.143975            1       True   
-     5                0.144257          23.647723            2       True   
-     6                     NaN           1.541076            1       True   
+     0                0.000752           0.162342            2       True   
+     1                1.509014          20.598038            1       True   
+     2                0.000718           0.161558            3       True   
+     3                0.213546         174.726521            2       True   
+     4                0.101668          14.551474            2       True   
+     5                0.173471         315.797393            1       True   
+     6                     NaN           0.162342            2       True   
+     7                     NaN          44.364559            1       True   
+     8                     NaN           1.278162            1       True   
      
         fit_order  
-     0          1  
-     1          3  
-     2          4  
-     3          6  
-     4          2  
-     5          5  
-     6          7  }
+     0          3  
+     1          1  
+     2          6  
+     3          5  
+     4          4  
+     5          2  
+     6          9  
+     7          8  
+     8          7  }
 
 
 
@@ -2803,20 +2668,18 @@ predictor_new_hp_3 = TabularPredictor(
 
 predictor_new_hp_3.fit(
     train_data=train,
-    time_limit=120,
+    time_limit=600,
     presets="best_quality",
     hyperparameters=hyperparameters_3,
     refit_full="best",
 )
-
-predictor_new_hp_3.fit_summary()
 ```
 
-    No path specified. Models will be saved in: "AutogluonModels/ag-20230601_144755/"
+    No path specified. Models will be saved in: "AutogluonModels/ag-20230602_150937/"
     Presets specified: ['best_quality']
     Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=8, num_bag_sets=20
-    Beginning AutoGluon training ... Time limit = 120s
-    AutoGluon will save models to "AutogluonModels/ag-20230601_144755/"
+    Beginning AutoGluon training ... Time limit = 600s
+    AutoGluon will save models to "AutogluonModels/ag-20230602_150937/"
     AutoGluon Version:  0.7.0
     Python Version:     3.8.10
     Operating System:   Linux
@@ -2829,7 +2692,7 @@ predictor_new_hp_3.fit_summary()
     Using Feature Generators to preprocess the data ...
     Dropping user-specified ignored columns: ['casual', 'registered']
     Fitting AutoMLPipelineFeatureGenerator...
-    	Available Memory:                    2547.57 MB
+    	Available Memory:                    2102.48 MB
     	Train Data (Original)  Memory Usage: 0.72 MB (0.0% of available memory)
     	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
     	Stage 1 Generators:
@@ -2861,38 +2724,38 @@ predictor_new_hp_3.fit_summary()
     	To change this, specify the eval_metric parameter of Predictor()
     AutoGluon will fit 2 stack levels (L1 to L2) ...
     Fitting 2 L1 models ...
-    Fitting model: LightGBM_BAG_L1 ... Training model for up to 79.91s of the 119.9s of remaining time.
+    Fitting model: LightGBM_BAG_L1 ... Training model for up to 399.83s of the 599.9s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-72.9884	 = Validation score   (-root_mean_squared_error)
-    	15.43s	 = Training   runtime
-    	0.87s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 61.31s of the 101.3s of remaining time.
+    	-70.0589	 = Validation score   (-root_mean_squared_error)
+    	15.13s	 = Training   runtime
+    	0.67s	 = Validation runtime
+    Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 381.59s of the 581.65s of remaining time.
     	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-147.0264	 = Validation score   (-root_mean_squared_error)
-    	65.32s	 = Training   runtime
-    	0.37s	 = Validation runtime
+    	-121.0792	 = Validation score   (-root_mean_squared_error)
+    	310.78s	 = Training   runtime
+    	0.16s	 = Validation runtime
     Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L2 ... Training model for up to 119.9s of the 32.53s of remaining time.
-    	-72.9884	 = Validation score   (-root_mean_squared_error)
-    	0.19s	 = Training   runtime
-    	0.0s	 = Validation runtime
-    Fitting 2 L2 models ...
-    Fitting model: LightGBM_BAG_L2 ... Training model for up to 32.27s of the 32.26s of remaining time.
-    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-68.5594	 = Validation score   (-root_mean_squared_error)
-    	15.73s	 = Training   runtime
-    	0.76s	 = Validation runtime
-    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 12.78s of the 12.77s of remaining time.
-    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
-    	-275.5854	 = Validation score   (-root_mean_squared_error)
-    	26.71s	 = Training   runtime
-    	0.13s	 = Validation runtime
-    Completed 1/20 k-fold bagging repeats ...
-    Fitting model: WeightedEnsemble_L3 ... Training model for up to 119.9s of the -17.44s of remaining time.
-    	-68.5594	 = Validation score   (-root_mean_squared_error)
+    Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 267.4s of remaining time.
+    	-70.0589	 = Validation score   (-root_mean_squared_error)
     	0.17s	 = Training   runtime
     	0.0s	 = Validation runtime
-    AutoGluon training complete, total runtime = 137.79s ... Best model: "WeightedEnsemble_L3"
+    Fitting 2 L2 models ...
+    Fitting model: LightGBM_BAG_L2 ... Training model for up to 267.16s of the 267.16s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-67.9156	 = Validation score   (-root_mean_squared_error)
+    	15.6s	 = Training   runtime
+    	0.53s	 = Validation runtime
+    Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 248.06s of the 248.05s of remaining time.
+    	Fitting 8 child models (S1F1 - S1F8) | Fitting with ParallelLocalFoldFittingStrategy
+    	-70.83	 = Validation score   (-root_mean_squared_error)
+    	214.18s	 = Training   runtime
+    	0.16s	 = Validation runtime
+    Completed 1/20 k-fold bagging repeats ...
+    Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the 30.31s of remaining time.
+    	-67.7738	 = Validation score   (-root_mean_squared_error)
+    	0.2s	 = Training   runtime
+    	0.0s	 = Validation runtime
+    AutoGluon training complete, total runtime = 570.08s ... Best model: "WeightedEnsemble_L3"
     Automatically performing refit_full as a post-fit operation (due to `.fit(..., refit_full=True)`
     Refitting models via `predictor.refit_full` using all of the data (combined train and validation)...
     	Models trained in this way will have the suffix "_FULL" and have NaN validation score.
@@ -2900,30 +2763,49 @@ predictor_new_hp_3.fit_summary()
     	To learn more, refer to the `.refit_full` method docstring which explains how "_FULL" models differ from normal models.
     Fitting 1 L1 models ...
     Fitting model: LightGBM_BAG_L1_FULL ...
-    	0.6s	 = Training   runtime
+    	0.88s	 = Training   runtime
     Fitting 1 L1 models ...
     Fitting model: NeuralNetTorch_BAG_L1_FULL ...
-    	7.8s	 = Training   runtime
+    	45.19s	 = Training   runtime
     Fitting 1 L2 models ...
     Fitting model: LightGBM_BAG_L2_FULL ...
-    	0.6s	 = Training   runtime
-    Refit complete, total runtime = 10.88s
-    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230601_144755/")
+    	0.54s	 = Training   runtime
+    Fitting 1 L2 models ...
+    Fitting model: NeuralNetTorch_BAG_L2_FULL ...
+    	30.52s	 = Training   runtime
+    Fitting model: WeightedEnsemble_L3_FULL | Skipping fit via cloning parent ...
+    	0.2s	 = Training   runtime
+    Refit complete, total runtime = 78.91s
+    TabularPredictor saved. To load, use: predictor = TabularPredictor.load("AutogluonModels/ag-20230602_150937/")
 
+
+
+
+
+    <autogluon.tabular.predictor.predictor.TabularPredictor at 0x7fbaa7020730>
+
+
+
+
+```python
+predictor_new_hp_3.fit_summary()
+```
 
     *** Summary of fit() ***
     Estimated performance of each model:
-                            model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
-    0             LightGBM_BAG_L2  -68.559370       2.007048   96.484189                0.763687          15.727599            2       True          4
-    1         WeightedEnsemble_L3  -68.559370       2.007807   96.651094                0.000760           0.166905            3       True          6
-    2             LightGBM_BAG_L1  -72.988425       0.868441   15.433599                0.868441          15.433599            1       True          1
-    3         WeightedEnsemble_L2  -72.988425       0.869536   15.625655                0.001095           0.192056            2       True          3
-    4       NeuralNetTorch_BAG_L1 -147.026409       0.374919   65.322992                0.374919          65.322992            1       True          2
-    5       NeuralNetTorch_BAG_L2 -275.585425       1.372813  107.470856                0.129453          26.714266            2       True          5
-    6  NeuralNetTorch_BAG_L1_FULL         NaN            NaN    7.803822                     NaN           7.803822            1       True          8
-    7        LightGBM_BAG_L2_FULL         NaN            NaN    9.006895                     NaN           0.599314            2       True          9
-    8        LightGBM_BAG_L1_FULL         NaN            NaN    0.603759                     NaN           0.603759            1       True          7
-    Number of models trained: 9
+                             model   score_val  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+    0          WeightedEnsemble_L3  -67.773843       1.514819  555.896756                0.001120           0.199394            3       True          6
+    1              LightGBM_BAG_L2  -67.915644       1.357257  341.512412                0.531536          15.597582            2       True          4
+    2              LightGBM_BAG_L1  -70.058891       0.668453   15.132133                0.668453          15.132133            1       True          1
+    3          WeightedEnsemble_L2  -70.058891       0.669166   15.305546                0.000713           0.173414            2       True          3
+    4        NeuralNetTorch_BAG_L2  -70.830043       0.982163  540.099780                0.156442         214.184949            2       True          5
+    5        NeuralNetTorch_BAG_L1 -121.079245       0.157268  310.782698                0.157268         310.782698            1       True          2
+    6     WeightedEnsemble_L3_FULL         NaN            NaN   77.330257                     NaN           0.199394            3       True         11
+    7   NeuralNetTorch_BAG_L2_FULL         NaN            NaN   76.589440                     NaN          30.516695            2       True         10
+    8   NeuralNetTorch_BAG_L1_FULL         NaN            NaN   45.188005                     NaN          45.188005            1       True          8
+    9         LightGBM_BAG_L2_FULL         NaN            NaN   46.614167                     NaN           0.541422            2       True          9
+    10        LightGBM_BAG_L1_FULL         NaN            NaN    0.884739                     NaN           0.884739            1       True          7
+    Number of models trained: 11
     Types of models trained:
     {'StackerEnsembleModel_TabularNeuralNetTorch', 'StackerEnsembleModel_LGB', 'WeightedEnsembleModel'}
     Bagging used: True  (with 8 folds)
@@ -2934,7 +2816,7 @@ predictor_new_hp_3.fit_summary()
     ('float', [])     : 3 | ['temp', 'atemp', 'windspeed']
     ('int', [])       : 3 | ['humidity', 'hour', 'day']
     ('int', ['bool']) : 2 | ['holiday', 'workingday']
-    Plot summary of models saved to file: AutogluonModels/ag-20230601_144755/SummaryOfModels.html
+    Plot summary of models saved to file: AutogluonModels/ag-20230602_150937/SummaryOfModels.html
     *** End of fit() summary ***
 
 
@@ -2949,44 +2831,54 @@ predictor_new_hp_3.fit_summary()
       'WeightedEnsemble_L3': 'WeightedEnsembleModel',
       'LightGBM_BAG_L1_FULL': 'StackerEnsembleModel_LGB',
       'NeuralNetTorch_BAG_L1_FULL': 'StackerEnsembleModel_TabularNeuralNetTorch',
-      'LightGBM_BAG_L2_FULL': 'StackerEnsembleModel_LGB'},
-     'model_performance': {'LightGBM_BAG_L1': -72.98842476114623,
-      'NeuralNetTorch_BAG_L1': -147.02640928935065,
-      'WeightedEnsemble_L2': -72.98842476114623,
-      'LightGBM_BAG_L2': -68.55937007326823,
-      'NeuralNetTorch_BAG_L2': -275.58542499426017,
-      'WeightedEnsemble_L3': -68.55937007326823,
+      'LightGBM_BAG_L2_FULL': 'StackerEnsembleModel_LGB',
+      'NeuralNetTorch_BAG_L2_FULL': 'StackerEnsembleModel_TabularNeuralNetTorch',
+      'WeightedEnsemble_L3_FULL': 'WeightedEnsembleModel'},
+     'model_performance': {'LightGBM_BAG_L1': -70.05889100702171,
+      'NeuralNetTorch_BAG_L1': -121.07924503250442,
+      'WeightedEnsemble_L2': -70.05889100702171,
+      'LightGBM_BAG_L2': -67.91564392527927,
+      'NeuralNetTorch_BAG_L2': -70.83004257667291,
+      'WeightedEnsemble_L3': -67.77384252549753,
       'LightGBM_BAG_L1_FULL': None,
       'NeuralNetTorch_BAG_L1_FULL': None,
-      'LightGBM_BAG_L2_FULL': None},
+      'LightGBM_BAG_L2_FULL': None,
+      'NeuralNetTorch_BAG_L2_FULL': None,
+      'WeightedEnsemble_L3_FULL': None},
      'model_best': 'WeightedEnsemble_L3',
-     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230601_144755/models/LightGBM_BAG_L1/',
-      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230601_144755/models/NeuralNetTorch_BAG_L1/',
-      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230601_144755/models/WeightedEnsemble_L2/',
-      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230601_144755/models/LightGBM_BAG_L2/',
-      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230601_144755/models/NeuralNetTorch_BAG_L2/',
-      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230601_144755/models/WeightedEnsemble_L3/',
-      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230601_144755/models/LightGBM_BAG_L1_FULL/',
-      'NeuralNetTorch_BAG_L1_FULL': 'AutogluonModels/ag-20230601_144755/models/NeuralNetTorch_BAG_L1_FULL/',
-      'LightGBM_BAG_L2_FULL': 'AutogluonModels/ag-20230601_144755/models/LightGBM_BAG_L2_FULL/'},
-     'model_fit_times': {'LightGBM_BAG_L1': 15.433598518371582,
-      'NeuralNetTorch_BAG_L1': 65.32299184799194,
-      'WeightedEnsemble_L2': 0.19205641746520996,
-      'LightGBM_BAG_L2': 15.727598667144775,
-      'NeuralNetTorch_BAG_L2': 26.714265823364258,
-      'WeightedEnsemble_L3': 0.16690540313720703,
-      'LightGBM_BAG_L1_FULL': 0.6037588119506836,
-      'NeuralNetTorch_BAG_L1_FULL': 7.803822040557861,
-      'LightGBM_BAG_L2_FULL': 0.5993137359619141},
-     'model_pred_times': {'LightGBM_BAG_L1': 0.868441104888916,
-      'NeuralNetTorch_BAG_L1': 0.37491941452026367,
-      'WeightedEnsemble_L2': 0.0010950565338134766,
-      'LightGBM_BAG_L2': 0.7636873722076416,
-      'NeuralNetTorch_BAG_L2': 0.12945270538330078,
-      'WeightedEnsemble_L3': 0.0007596015930175781,
+     'model_paths': {'LightGBM_BAG_L1': 'AutogluonModels/ag-20230602_150937/models/LightGBM_BAG_L1/',
+      'NeuralNetTorch_BAG_L1': 'AutogluonModels/ag-20230602_150937/models/NeuralNetTorch_BAG_L1/',
+      'WeightedEnsemble_L2': 'AutogluonModels/ag-20230602_150937/models/WeightedEnsemble_L2/',
+      'LightGBM_BAG_L2': 'AutogluonModels/ag-20230602_150937/models/LightGBM_BAG_L2/',
+      'NeuralNetTorch_BAG_L2': 'AutogluonModels/ag-20230602_150937/models/NeuralNetTorch_BAG_L2/',
+      'WeightedEnsemble_L3': 'AutogluonModels/ag-20230602_150937/models/WeightedEnsemble_L3/',
+      'LightGBM_BAG_L1_FULL': 'AutogluonModels/ag-20230602_150937/models/LightGBM_BAG_L1_FULL/',
+      'NeuralNetTorch_BAG_L1_FULL': 'AutogluonModels/ag-20230602_150937/models/NeuralNetTorch_BAG_L1_FULL/',
+      'LightGBM_BAG_L2_FULL': 'AutogluonModels/ag-20230602_150937/models/LightGBM_BAG_L2_FULL/',
+      'NeuralNetTorch_BAG_L2_FULL': 'AutogluonModels/ag-20230602_150937/models/NeuralNetTorch_BAG_L2_FULL/',
+      'WeightedEnsemble_L3_FULL': 'AutogluonModels/ag-20230602_150937/models/WeightedEnsemble_L3_FULL/'},
+     'model_fit_times': {'LightGBM_BAG_L1': 15.132132530212402,
+      'NeuralNetTorch_BAG_L1': 310.78269815444946,
+      'WeightedEnsemble_L2': 0.17341351509094238,
+      'LightGBM_BAG_L2': 15.597581624984741,
+      'NeuralNetTorch_BAG_L2': 214.1849491596222,
+      'WeightedEnsemble_L3': 0.19939446449279785,
+      'LightGBM_BAG_L1_FULL': 0.8847391605377197,
+      'NeuralNetTorch_BAG_L1_FULL': 45.188005447387695,
+      'LightGBM_BAG_L2_FULL': 0.5414223670959473,
+      'NeuralNetTorch_BAG_L2_FULL': 30.516695499420166,
+      'WeightedEnsemble_L3_FULL': 0.19939446449279785},
+     'model_pred_times': {'LightGBM_BAG_L1': 0.6684529781341553,
+      'NeuralNetTorch_BAG_L1': 0.15726828575134277,
+      'WeightedEnsemble_L2': 0.000713348388671875,
+      'LightGBM_BAG_L2': 0.5315361022949219,
+      'NeuralNetTorch_BAG_L2': 0.15644216537475586,
+      'WeightedEnsemble_L3': 0.0011196136474609375,
       'LightGBM_BAG_L1_FULL': None,
       'NeuralNetTorch_BAG_L1_FULL': None,
-      'LightGBM_BAG_L2_FULL': None},
+      'LightGBM_BAG_L2_FULL': None,
+      'NeuralNetTorch_BAG_L2_FULL': None,
+      'WeightedEnsemble_L3_FULL': None},
      'num_bag_folds': 8,
      'max_stack_level': 3,
      'model_hyperparams': {'LightGBM_BAG_L1': {'use_orig_features': True,
@@ -3024,39 +2916,53 @@ predictor_new_hp_3.fit_summary()
       'LightGBM_BAG_L2_FULL': {'use_orig_features': True,
        'max_base_models': 25,
        'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'NeuralNetTorch_BAG_L2_FULL': {'use_orig_features': True,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
+       'save_bag_folds': True},
+      'WeightedEnsemble_L3_FULL': {'use_orig_features': False,
+       'max_base_models': 25,
+       'max_base_models_per_type': 5,
        'save_bag_folds': True}},
-     'leaderboard':                         model   score_val  pred_time_val    fit_time  \
-     0             LightGBM_BAG_L2  -68.559370       2.007048   96.484189   
-     1         WeightedEnsemble_L3  -68.559370       2.007807   96.651094   
-     2             LightGBM_BAG_L1  -72.988425       0.868441   15.433599   
-     3         WeightedEnsemble_L2  -72.988425       0.869536   15.625655   
-     4       NeuralNetTorch_BAG_L1 -147.026409       0.374919   65.322992   
-     5       NeuralNetTorch_BAG_L2 -275.585425       1.372813  107.470856   
-     6  NeuralNetTorch_BAG_L1_FULL         NaN            NaN    7.803822   
-     7        LightGBM_BAG_L2_FULL         NaN            NaN    9.006895   
-     8        LightGBM_BAG_L1_FULL         NaN            NaN    0.603759   
+     'leaderboard':                          model   score_val  pred_time_val    fit_time  \
+     0          WeightedEnsemble_L3  -67.773843       1.514819  555.896756   
+     1              LightGBM_BAG_L2  -67.915644       1.357257  341.512412   
+     2              LightGBM_BAG_L1  -70.058891       0.668453   15.132133   
+     3          WeightedEnsemble_L2  -70.058891       0.669166   15.305546   
+     4        NeuralNetTorch_BAG_L2  -70.830043       0.982163  540.099780   
+     5        NeuralNetTorch_BAG_L1 -121.079245       0.157268  310.782698   
+     6     WeightedEnsemble_L3_FULL         NaN            NaN   77.330257   
+     7   NeuralNetTorch_BAG_L2_FULL         NaN            NaN   76.589440   
+     8   NeuralNetTorch_BAG_L1_FULL         NaN            NaN   45.188005   
+     9         LightGBM_BAG_L2_FULL         NaN            NaN   46.614167   
+     10        LightGBM_BAG_L1_FULL         NaN            NaN    0.884739   
      
-        pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
-     0                0.763687          15.727599            2       True   
-     1                0.000760           0.166905            3       True   
-     2                0.868441          15.433599            1       True   
-     3                0.001095           0.192056            2       True   
-     4                0.374919          65.322992            1       True   
-     5                0.129453          26.714266            2       True   
-     6                     NaN           7.803822            1       True   
-     7                     NaN           0.599314            2       True   
-     8                     NaN           0.603759            1       True   
+         pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  \
+     0                 0.001120           0.199394            3       True   
+     1                 0.531536          15.597582            2       True   
+     2                 0.668453          15.132133            1       True   
+     3                 0.000713           0.173414            2       True   
+     4                 0.156442         214.184949            2       True   
+     5                 0.157268         310.782698            1       True   
+     6                      NaN           0.199394            3       True   
+     7                      NaN          30.516695            2       True   
+     8                      NaN          45.188005            1       True   
+     9                      NaN           0.541422            2       True   
+     10                     NaN           0.884739            1       True   
      
-        fit_order  
-     0          4  
-     1          6  
-     2          1  
-     3          3  
-     4          2  
-     5          5  
-     6          8  
-     7          9  
-     8          7  }
+         fit_order  
+     0           6  
+     1           4  
+     2           1  
+     3           3  
+     4           5  
+     5           2  
+     6          11  
+     7          10  
+     8           8  
+     9           9  
+     10          7  }
 
 
 
@@ -3103,47 +3009,47 @@ leaderboard_new_hp_df_1
     <tr>
       <th>0</th>
       <td>WeightedEnsemble_L2</td>
-      <td>-61.513434</td>
-      <td>1.707213</td>
-      <td>81.267027</td>
-      <td>0.000782</td>
-      <td>0.166178</td>
+      <td>-60.386725</td>
+      <td>1.658752</td>
+      <td>306.940421</td>
+      <td>0.000860</td>
+      <td>0.155286</td>
       <td>2</td>
       <td>True</td>
       <td>3</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>LightGBM_BAG_L1</td>
-      <td>-61.564474</td>
-      <td>1.525321</td>
-      <td>20.440489</td>
-      <td>1.525321</td>
-      <td>20.440489</td>
-      <td>1</td>
-      <td>True</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>WeightedEnsemble_L3</td>
-      <td>-62.909433</td>
-      <td>2.188551</td>
-      <td>123.195870</td>
-      <td>0.000821</td>
-      <td>0.168333</td>
+      <td>-61.391586</td>
+      <td>1.979550</td>
+      <td>455.726671</td>
+      <td>0.000714</td>
+      <td>0.161280</td>
       <td>3</td>
       <td>True</td>
       <td>6</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>LightGBM_BAG_L1</td>
+      <td>-61.564474</td>
+      <td>1.498764</td>
+      <td>20.368878</td>
+      <td>1.498764</td>
+      <td>20.368878</td>
+      <td>1</td>
+      <td>True</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>3</th>
       <td>LightGBM_BAG_L2</td>
-      <td>-63.311743</td>
-      <td>1.793295</td>
-      <td>95.779210</td>
-      <td>0.086864</td>
-      <td>14.678361</td>
+      <td>-62.122728</td>
+      <td>1.749792</td>
+      <td>320.944915</td>
+      <td>0.091900</td>
+      <td>14.159780</td>
       <td>2</td>
       <td>True</td>
       <td>4</td>
@@ -3151,11 +3057,11 @@ leaderboard_new_hp_df_1
     <tr>
       <th>4</th>
       <td>NeuralNetTorch_BAG_L2</td>
-      <td>-65.489339</td>
-      <td>2.100866</td>
-      <td>108.349176</td>
-      <td>0.394434</td>
-      <td>27.248328</td>
+      <td>-62.148654</td>
+      <td>1.886936</td>
+      <td>441.405611</td>
+      <td>0.229044</td>
+      <td>134.620476</td>
       <td>2</td>
       <td>True</td>
       <td>5</td>
@@ -3163,11 +3069,11 @@ leaderboard_new_hp_df_1
     <tr>
       <th>5</th>
       <td>NeuralNetTorch_BAG_L1</td>
-      <td>-86.110372</td>
-      <td>0.181111</td>
-      <td>60.660360</td>
-      <td>0.181111</td>
-      <td>60.660360</td>
+      <td>-66.618550</td>
+      <td>0.159128</td>
+      <td>286.416256</td>
+      <td>0.159128</td>
+      <td>286.416256</td>
       <td>1</td>
       <td>True</td>
       <td>2</td>
@@ -3177,9 +3083,9 @@ leaderboard_new_hp_df_1
       <td>WeightedEnsemble_L2_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>8.604759</td>
+      <td>40.452355</td>
       <td>NaN</td>
-      <td>0.166178</td>
+      <td>0.155286</td>
       <td>2</td>
       <td>True</td>
       <td>9</td>
@@ -3189,9 +3095,9 @@ leaderboard_new_hp_df_1
       <td>NeuralNetTorch_BAG_L1_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>6.851289</td>
+      <td>39.006562</td>
       <td>NaN</td>
-      <td>6.851289</td>
+      <td>39.006562</td>
       <td>1</td>
       <td>True</td>
       <td>8</td>
@@ -3201,9 +3107,9 @@ leaderboard_new_hp_df_1
       <td>LightGBM_BAG_L1_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.587292</td>
+      <td>1.290507</td>
       <td>NaN</td>
-      <td>1.587292</td>
+      <td>1.290507</td>
       <td>1</td>
       <td>True</td>
       <td>7</td>
@@ -3256,84 +3162,108 @@ leaderboard_new_hp_df_2
   <tbody>
     <tr>
       <th>0</th>
-      <td>LightGBM_BAG_L1</td>
-      <td>-63.345619</td>
-      <td>2.101660</td>
-      <td>21.840686</td>
-      <td>2.101660</td>
-      <td>21.840686</td>
-      <td>1</td>
-      <td>True</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>WeightedEnsemble_L2</td>
-      <td>-63.345619</td>
-      <td>2.102354</td>
-      <td>22.002602</td>
-      <td>0.000694</td>
-      <td>0.161916</td>
+      <td>-61.097221</td>
+      <td>1.683237</td>
+      <td>336.557773</td>
+      <td>0.000752</td>
+      <td>0.162342</td>
       <td>2</td>
       <td>True</td>
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>LightGBM_BAG_L2</td>
-      <td>-64.039953</td>
-      <td>3.039567</td>
-      <td>100.124812</td>
-      <td>0.795607</td>
-      <td>18.140151</td>
-      <td>2</td>
+      <th>1</th>
+      <td>LightGBM_BAG_L1</td>
+      <td>-61.564474</td>
+      <td>1.509014</td>
+      <td>20.598038</td>
+      <td>1.509014</td>
+      <td>20.598038</td>
+      <td>1</td>
       <td>True</td>
-      <td>4</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>2</th>
       <td>WeightedEnsemble_L3</td>
-      <td>-64.039953</td>
-      <td>3.040397</td>
-      <td>100.289885</td>
-      <td>0.000830</td>
-      <td>0.165072</td>
+      <td>-61.971928</td>
+      <td>1.998416</td>
+      <td>525.834985</td>
+      <td>0.000718</td>
+      <td>0.161558</td>
       <td>3</td>
       <td>True</td>
       <td>6</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>NeuralNetTorch_BAG_L1</td>
-      <td>-148.020895</td>
-      <td>0.142299</td>
-      <td>60.143975</td>
-      <td>0.142299</td>
-      <td>60.143975</td>
-      <td>1</td>
-      <td>True</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>5</th>
+      <th>3</th>
       <td>NeuralNetTorch_BAG_L2</td>
-      <td>-320.070707</td>
-      <td>2.388217</td>
-      <td>105.632385</td>
-      <td>0.144257</td>
-      <td>23.647723</td>
+      <td>-62.637921</td>
+      <td>1.896030</td>
+      <td>511.121953</td>
+      <td>0.213546</td>
+      <td>174.726521</td>
       <td>2</td>
       <td>True</td>
       <td>5</td>
     </tr>
     <tr>
+      <th>4</th>
+      <td>LightGBM_BAG_L2</td>
+      <td>-62.696003</td>
+      <td>1.784152</td>
+      <td>350.946906</td>
+      <td>0.101668</td>
+      <td>14.551474</td>
+      <td>2</td>
+      <td>True</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NeuralNetTorch_BAG_L1</td>
+      <td>-71.043477</td>
+      <td>0.173471</td>
+      <td>315.797393</td>
+      <td>0.173471</td>
+      <td>315.797393</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>6</th>
+      <td>WeightedEnsemble_L2_FULL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>45.805062</td>
+      <td>NaN</td>
+      <td>0.162342</td>
+      <td>2</td>
+      <td>True</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NeuralNetTorch_BAG_L1_FULL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>44.364559</td>
+      <td>NaN</td>
+      <td>44.364559</td>
+      <td>1</td>
+      <td>True</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>8</th>
       <td>LightGBM_BAG_L1_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.541076</td>
+      <td>1.278162</td>
       <td>NaN</td>
-      <td>1.541076</td>
+      <td>1.278162</td>
       <td>1</td>
       <td>True</td>
       <td>7</td>
@@ -3343,6 +3273,9 @@ leaderboard_new_hp_df_2
 </div>
 
 
+
+Insight:
+- This is the only time when we do not see L_3 as top models
 
 
 ```python
@@ -3386,36 +3319,36 @@ leaderboard_new_hp_df_3
   <tbody>
     <tr>
       <th>0</th>
-      <td>LightGBM_BAG_L2</td>
-      <td>-68.559370</td>
-      <td>2.007048</td>
-      <td>96.484189</td>
-      <td>0.763687</td>
-      <td>15.727599</td>
-      <td>2</td>
-      <td>True</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>WeightedEnsemble_L3</td>
-      <td>-68.559370</td>
-      <td>2.007807</td>
-      <td>96.651094</td>
-      <td>0.000760</td>
-      <td>0.166905</td>
+      <td>-67.773843</td>
+      <td>1.514819</td>
+      <td>555.896756</td>
+      <td>0.001120</td>
+      <td>0.199394</td>
       <td>3</td>
       <td>True</td>
       <td>6</td>
     </tr>
     <tr>
+      <th>1</th>
+      <td>LightGBM_BAG_L2</td>
+      <td>-67.915644</td>
+      <td>1.357257</td>
+      <td>341.512412</td>
+      <td>0.531536</td>
+      <td>15.597582</td>
+      <td>2</td>
+      <td>True</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>2</th>
       <td>LightGBM_BAG_L1</td>
-      <td>-72.988425</td>
-      <td>0.868441</td>
-      <td>15.433599</td>
-      <td>0.868441</td>
-      <td>15.433599</td>
+      <td>-70.058891</td>
+      <td>0.668453</td>
+      <td>15.132133</td>
+      <td>0.668453</td>
+      <td>15.132133</td>
       <td>1</td>
       <td>True</td>
       <td>1</td>
@@ -3423,71 +3356,95 @@ leaderboard_new_hp_df_3
     <tr>
       <th>3</th>
       <td>WeightedEnsemble_L2</td>
-      <td>-72.988425</td>
-      <td>0.869536</td>
-      <td>15.625655</td>
-      <td>0.001095</td>
-      <td>0.192056</td>
+      <td>-70.058891</td>
+      <td>0.669166</td>
+      <td>15.305546</td>
+      <td>0.000713</td>
+      <td>0.173414</td>
       <td>2</td>
       <td>True</td>
       <td>3</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>NeuralNetTorch_BAG_L1</td>
-      <td>-147.026409</td>
-      <td>0.374919</td>
-      <td>65.322992</td>
-      <td>0.374919</td>
-      <td>65.322992</td>
-      <td>1</td>
-      <td>True</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>5</th>
       <td>NeuralNetTorch_BAG_L2</td>
-      <td>-275.585425</td>
-      <td>1.372813</td>
-      <td>107.470856</td>
-      <td>0.129453</td>
-      <td>26.714266</td>
+      <td>-70.830043</td>
+      <td>0.982163</td>
+      <td>540.099780</td>
+      <td>0.156442</td>
+      <td>214.184949</td>
       <td>2</td>
       <td>True</td>
       <td>5</td>
     </tr>
     <tr>
+      <th>5</th>
+      <td>NeuralNetTorch_BAG_L1</td>
+      <td>-121.079245</td>
+      <td>0.157268</td>
+      <td>310.782698</td>
+      <td>0.157268</td>
+      <td>310.782698</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>6</th>
+      <td>WeightedEnsemble_L3_FULL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>77.330257</td>
+      <td>NaN</td>
+      <td>0.199394</td>
+      <td>3</td>
+      <td>True</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NeuralNetTorch_BAG_L2_FULL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>76.589440</td>
+      <td>NaN</td>
+      <td>30.516695</td>
+      <td>2</td>
+      <td>True</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>8</th>
       <td>NeuralNetTorch_BAG_L1_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>7.803822</td>
+      <td>45.188005</td>
       <td>NaN</td>
-      <td>7.803822</td>
+      <td>45.188005</td>
       <td>1</td>
       <td>True</td>
       <td>8</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>9</th>
       <td>LightGBM_BAG_L2_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>9.006895</td>
+      <td>46.614167</td>
       <td>NaN</td>
-      <td>0.599314</td>
+      <td>0.541422</td>
       <td>2</td>
       <td>True</td>
       <td>9</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>10</th>
       <td>LightGBM_BAG_L1_FULL</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>0.603759</td>
+      <td>0.884739</td>
       <td>NaN</td>
-      <td>0.603759</td>
+      <td>0.884739</td>
       <td>1</td>
       <td>True</td>
       <td>7</td>
@@ -3508,21 +3465,25 @@ plt.show()
 
 
     
-![png](output_68_0.png)
+![png](output_76_0.png)
     
 
 
 
     
-![png](output_68_1.png)
+![png](output_76_1.png)
     
 
 
 
     
-![png](output_68_2.png)
+![png](output_76_2.png)
     
 
+
+Insight:
+- WeightedEnsemble is best in all cases, so this can be the model to experiment more with
+- Also NN_Torch is not showing any good relative progess across all cases, so it can be safe to remove it
 
 
 ```python
@@ -3533,11 +3494,11 @@ predictions_new_hyp_1.head()
 
 
 
-    0    21.584213
-    1     4.534583
-    2     0.507605
-    3     1.623464
-    4     1.280358
+    0    18.348980
+    1     4.918410
+    2     1.559165
+    3     2.262614
+    4     2.383590
     Name: count, dtype: float32
 
 
@@ -3551,11 +3512,11 @@ predictions_new_hyp_2.head()
 
 
 
-    0    29.971573
-    1     8.629538
-    2     4.112672
-    3    -1.318882
-    4    -1.364102
+    0    18.680775
+    1     4.052975
+    2     0.661192
+    3     1.742600
+    4     1.751991
     Name: count, dtype: float32
 
 
@@ -3569,11 +3530,11 @@ predictions_new_hyp_3.head()
 
 
 
-    0    24.633934
-    1     8.686478
-    2     8.407059
-    3     8.726441
-    4     8.746774
+    0    21.138212
+    1    10.469967
+    2    10.244417
+    3     9.903305
+    4    10.091461
     Name: count, dtype: float32
 
 
@@ -3607,9 +3568,9 @@ submission_new_hyp_3.to_csv("submission_new_hyp_3.csv", index=False)
 !kaggle competitions submit -c bike-sharing-demand -f submission_new_hyp_3.csv -m "new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves"
 ```
 
-    100%|█████████████████████████████████████████| 187k/187k [00:00<00:00, 345kB/s]
-    100%|█████████████████████████████████████████| 187k/187k [00:00<00:00, 394kB/s]
-    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 342kB/s]
+    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 454kB/s]
+    100%|█████████████████████████████████████████| 187k/187k [00:00<00:00, 380kB/s]
+    100%|█████████████████████████████████████████| 188k/188k [00:00<00:00, 364kB/s]
     Successfully submitted to Bike Sharing Demand
 
 
@@ -3619,18 +3580,19 @@ submission_new_hyp_3.to_csv("submission_new_hyp_3.csv", index=False)
 
     fileName                     date                 description                                                                                         status    publicScore  privateScore  
     ---------------------------  -------------------  --------------------------------------------------------------------------------------------------  --------  -----------  ------------  
-    submission_new_hyp_3.csv     2023-06-01 14:50:49  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  pending                              
-    submission_new_hyp_2.csv     2023-06-01 14:50:46  new features with hyperparameters epoch, boost round, learning rate, extra trees                    pending                              
-    submission_new_hyp_1.csv     2023-06-01 14:50:44  new features with hyperparameters epoch, boost round                                                complete  0.60783      0.60783       
-    submission_new_features.csv  2023-06-01 14:43:01  Two new features (hours & Weekday)                                                                  complete  0.58036      0.58036       
+    submission_new_hyp_3.csv     2023-06-02 15:20:48  new features with hyperparameters epoch, boost round, learning rate, extra trees, drop-out, leaves  complete  0.51814      0.51814       
+    submission_new_hyp_2.csv     2023-06-02 15:20:45  new features with hyperparameters epoch, boost round, learning rate, extra trees                    complete  0.57940      0.57940       
+    submission_new_hyp_1.csv     2023-06-02 15:20:43  new features with hyperparameters epoch, boost round                                                complete  0.54777      0.54777       
+    submission_new_features.csv  2023-06-02 14:44:22  Two new features (hours & Weekday)                                                                  complete  0.50823      0.50823       
     tail: write error: Broken pipe
 
 
 #### New Score
 
-- Hy1:  0.60933
-- Hy2:  0.65221
-- Hy3:  0.50079      
+- Hy1:  0.50823
+- Hy2:  0.57940
+- Hy3:  0.51814   
+
 
 ## Step 7: Write a Report
 ### Refer to the markdown file for the full report
@@ -3642,7 +3604,7 @@ fig = (
     pd.DataFrame(
         {
             "model": ["initial", "add_features", "hp1", "hp2", "hp3"],
-            "score": [61.018598, 59.963984, 61.523895, 63.345619, 68.541952],
+            "score": [52.871786, 58.196982, 60.386725, 61.097221, 67.773843],
         }
     )
     .plot(x="model", y="score", figsize=(8, 6))
@@ -3654,7 +3616,7 @@ fig.savefig("model_train_score.png")
 
 
     
-![png](output_78_0.png)
+![png](output_87_0.png)
     
 
 
@@ -3664,7 +3626,7 @@ fig = (
     pd.DataFrame(
         {
             "test_eval": ["initial", "add_features", "hp1", "hp2", "hp3"],
-            "score": [2.08327, 0.58036, 0.73551, 0.65221, 0.50079],
+            "score": [1.80958, 0.50823, 0.54777, 0.57940, 0.51814],
         }
     )
     .plot(x="test_eval", y="score", figsize=(8, 6))
@@ -3675,8 +3637,14 @@ fig.savefig("model_test_score.png")
 
 
     
-![png](output_79_0.png)
+![png](output_88_0.png)
     
+
+
+Conclusion
+- Approach was simple, to change the default values, and see which direction gives better result. This is very basic approach, but result are good as compare to very initial solution
+- Best model is to use WeightedEnsemble_L3 and two extra features. All default hyperparameter
+- Although Model with hyp_3 does show some better result as compare to hyp_2, so we can go ahead in that direction by changing drop-out and extra tree.
 
 
 ### Hyperparameter table
@@ -3688,7 +3656,7 @@ pd.DataFrame({
     "hpo1": ["default", "default", "epoch, boost round", "epoch, boost round", "epoch, boost round"],
     "hpo2": ["default", "default", "default", "learning rate, extra trees", "learning rate, extra trees"],
     "hpo3": ["default", "default", "default", "default", "drop-out, leaves"],
-    "score": [2.08327, 0.58036, 0.73551, 0.65221, 0.50079]
+    "score": [1.80958, 0.50823, 0.54777, 0.57940, 0.51814]
 })
 ```
 
@@ -3727,7 +3695,7 @@ pd.DataFrame({
       <td>default</td>
       <td>default</td>
       <td>default</td>
-      <td>2.08327</td>
+      <td>1.80958</td>
     </tr>
     <tr>
       <th>1</th>
@@ -3735,7 +3703,7 @@ pd.DataFrame({
       <td>default</td>
       <td>default</td>
       <td>default</td>
-      <td>0.58036</td>
+      <td>0.50823</td>
     </tr>
     <tr>
       <th>2</th>
@@ -3743,7 +3711,7 @@ pd.DataFrame({
       <td>epoch, boost round</td>
       <td>default</td>
       <td>default</td>
-      <td>0.73551</td>
+      <td>0.54777</td>
     </tr>
     <tr>
       <th>3</th>
@@ -3751,7 +3719,7 @@ pd.DataFrame({
       <td>epoch, boost round</td>
       <td>learning rate, extra trees</td>
       <td>default</td>
-      <td>0.65221</td>
+      <td>0.57940</td>
     </tr>
     <tr>
       <th>4</th>
@@ -3759,7 +3727,7 @@ pd.DataFrame({
       <td>epoch, boost round</td>
       <td>learning rate, extra trees</td>
       <td>drop-out, leaves</td>
-      <td>0.50079</td>
+      <td>0.51814</td>
     </tr>
   </tbody>
 </table>
